@@ -1,7 +1,53 @@
 <div class="content">
 
 <app-navbar></app-navbar>
+<div class="main">
+    <div class="main_content">
+   <div class="left_screen">
+        <div>
+            <div class="heading">
+              <h2>Hello there! I'm</h2>
+                <h1>Hannah Luisa Anton</h1>
+                <h2 class="margin20">Frontend Developer</h2>  
+            </div>
+            
+            <button>Get in Touch</button>
+        </div>
+        <div class="scroll_icon">
+            <img class="scroll_icon" src="./../../assets/imgs/icons/ScollDown.png">
+            <img class="arrow_down" src="./../../assets/imgs/icons/arrow_down.png">
+        </div>
+    </div>
+    <div>
+        <div class="photo-container">
+            <img class="pos_absolute topright" src="./../../assets/imgs/bg_item_orange.png">
+            <img class="pos_absolute bottomright" src="./../../assets/imgs/photo1.png">
+        </div>
+    </div>
+    </div>
 
+
+
+
+ 
+
+
+
+
+
+    
+    <div class="dots">
+        @for(page of pages; track page){
+            @if(currentPage == page){
+                <div class="diamont"></div>
+            } @else if(currentPage % 2 === 0){
+                <div class="dot black"></div>
+            } @else {
+               <div class="dot white"></div>
+            }
+        }
+    </div>
+</div>
 </div>
 
 
