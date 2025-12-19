@@ -37,13 +37,13 @@
 
     
     <div class="dots">
-        @for(page of pages; track page){
-            @if(currentPage == page){
+        @for(page of pageService.pages; track page){
+            @if(pageService.currentPage === $index){
                 <div class="diamont"></div>
-            } @else if(currentPage % 2 === 0){
-                <div class="dot black"></div>
+            } @else if(pageService.currentPage % 2 === 0){
+                <div (click)="pageService.goToPage($index)" class="dot white"></div>
             } @else {
-               <div class="dot white"></div>
+               <div (click)="pageService.goToPage($index)" class="dot black"></div>
             }
         }
     </div>

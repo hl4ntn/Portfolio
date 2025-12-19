@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PagesService } from '../pages.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -9,8 +10,9 @@ import { NavbarComponent } from './navbar/navbar.component';
   styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent {
-  pages = [1,2,3,4,5,6];
-  currentPage = 1;
+  constructor(public pageService: PagesService){
+
+  }
 }
 
 

@@ -1,6 +1,6 @@
 
 
-<app-landing-page></app-landing-page>
+<!-- <app-landing-page></app-landing-page>
 <app-about-me></app-about-me>
 <app-core-competencies></app-core-competencies>
 <app-my-work></app-my-work>
@@ -8,4 +8,21 @@
 <app-call-to-action></app-call-to-action>
 
 <router-outlet></router-outlet>
-<app-legal-notice></app-legal-notice>
+<app-legal-notice></app-legal-notice> -->
+
+<!-- app.component.html -->
+<div class="dots-container">
+  <div class="dots">
+      @for(page of pageService.pages; track page){
+          @if(pageService.currentPage === $index){
+              <div class="diamont"></div>
+          } @else if(pageService.currentPage % 2 === 0){
+              <div (click)="pageService.goToPage($index)" class="dot black"></div>
+          } @else {
+             <div (click)="pageService.goToPage($index)" class="dot white"></div>
+          }
+      }
+  </div>
+</div>
+
+<router-outlet></router-outlet>
