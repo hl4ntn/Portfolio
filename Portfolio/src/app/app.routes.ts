@@ -10,9 +10,9 @@ import { ReferencesComponent } from "./references/references.component";
 export const routes: Routes = [
  { path: '', component: LandingPageComponent },
   { path: 'about', component: AboutMeComponent },
-  { path: 'Competencies', component: CoreCompetenciesComponent },
+  { path: 'competencies', component: CoreCompetenciesComponent },
   { path: 'work', component: MyWorkComponent },
   { path: 'references', component: ReferencesComponent },
-  { path: 'callToAction', component: CallToActionComponent },
-   { path: 'legal', component: LegalNoticeComponent }
+  { path: 'contact', component: CallToActionComponent },
+   { path: 'legal-notice', component: LegalNoticeComponent }
 ];

@@ -6,12 +6,13 @@ import { Router } from '@angular/router';
 })
 export class PagesService {
  pages = [ 
-    { label: 'Landing', route: '/' },
-    { label: 'About', route: '/about' },
-    { label: 'Competencies', route: '/Competencies' },
-    { label: 'Work', route: '/work' },
-    { label: 'References', route: '/references' },
-    { label: 'Legal', route: '/legal-notice' }
+    { label: 'landing', route: '/' },
+    { label: 'about', route: '/about' },
+    { label: 'competencies', route: '/competencies' },
+    { label: 'work', route: '/work' },
+    { label: 'references', route: '/references' },
+    { label: 'contact', route: '/contact' },
+    { label: 'legal-notice', route: '/legal-notice' }
   ];
  currentPage = 0;
   constructor(private router: Router) { }
