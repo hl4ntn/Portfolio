@@ -16,7 +16,7 @@
 </section>
             } @else if(pageService.currentPage % 2 === 0 || pageService.currentPage > 4){
                 <section>
-    <div class="name_header">
+    <div (click)="pageService.goToPage(0)" class="name_header">
         <img src="./../../../assets/imgs/icons/logo.png" alt="logo">
         <p class="white">H.L.A.</p>
     </div>
@@ -28,7 +28,7 @@
             } @else {
 
 
-               <section><div class="name_header">
+               <section><div  (click)="pageService.goToPage(0)" class="name_header">
         <img src="./../../../assets/imgs/icons/logo.png" alt="logo">
         <p class="black">H.L.A.</p>
     </div>
