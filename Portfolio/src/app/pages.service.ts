@@ -8,6 +8,7 @@ export class PagesService {
  pages = [ 
     { label: 'Landing', route: '/' },
     { label: 'About', route: '/about' },
+    { label: 'Competencies', route: '/Competencies' },
     { label: 'Work', route: '/work' },
     { label: 'References', route: '/references' },
     { label: 'Legal', route: '/legal-notice' }
