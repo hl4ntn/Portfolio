@@ -1,0 +1,42 @@
+@if(pageService.currentPage === 0){
+    <section>
+    <div class="socials">
+        <img src="./../../../assets/imgs/icons/github.png" alt="menu">
+        <img src="./../../../assets/imgs/icons/linkedin.png" alt="menu">
+        <img src="./../../../assets/imgs/icons/mail.png" alt="menu">
+    </div>
+    <div class="name_header">
+        <img src="./../../../assets/imgs/icons/logo.png" alt="logo">
+        <p class="white">H.L.A.</p>
+    </div>
+    <div class="menu-options">
+        <button class="btn_white">EN</button>
+        <img src="./../../../assets/imgs/icons/menu_white.png" alt="menu">
+    </div>
+</section>
+            } @else if(pageService.currentPage % 2 === 0){
+                <section>
+    <div class="name_header">
+        <img src="./../../../assets/imgs/icons/logo.png" alt="logo">
+        <p class="white">H.L.A.</p>
+    </div>
+    <div class="menu-options">
+        <button class="btn_white">EN</button>
+        <img src="./../../../assets/imgs/icons/menu_white.png" alt="menu">
+    </div>
+</section>
+            } @else {
+
+
+               <section><div class="name_header">
+        <img src="./../../../assets/imgs/icons/logo.png" alt="logo">
+        <p class="black">H.L.A.</p>
+    </div>
+    <div class="menu-options">
+        <button class="btn_black">EN</button>
+        <img src="./../../../assets/imgs/icons/menu_black.png" alt="menu">
+    </div></section>
+            }
+    
+    
+

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from "./navbar/navbar.component";
+import { DotsComponent } from '../dots/dots.component';
+import { NavbarComponent1 } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [NavbarComponent],
+  imports: [NavbarComponent1, DotsComponent],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })

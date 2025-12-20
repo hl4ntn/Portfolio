@@ -19,6 +19,7 @@ export class PagesService {
     const page = this.pages[index];
     if (page) {
       this.currentPage = index;
+      console.log(this.currentPage);
       this.router.navigate([page.route]);
     }
   }
