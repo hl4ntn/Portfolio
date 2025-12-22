@@ -14,27 +14,50 @@
 .main{
     display: flex;
     padding: 0 72px;
-    // height: calc(100% - 165px);
     min-height: 0;
     justify-content: space-between;
     padding-top: 72px;
     flex: 1 1 auto;
-    //  box-sizing: border-box;
 }
 
 .text_box{
     height: 250px;
     position: absolute;
     min-width: 600px;
-    width: 41%;
+    max-width: 918px;
     border-radius: 4px;
     padding: 32px;
     background-color: #1D1D1D;
     color: #F8F7E5;
-    // top: 42%;
     top: 328px;
     left: 554px;
+    >div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        >button{
+        min-width: 131px;
+        height: 40px;
+        border-radius: 100px;
+        border: 1px solid #F8F7E5;
+        color: #F8F7E5;
+        padding: 12px 24px;
+        background-color: #1D1D1D;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    >img{
+        width: 28.4px;
+        height: 30.24px;
+    }
+    }
 }
+
 
 
 .left_part{
