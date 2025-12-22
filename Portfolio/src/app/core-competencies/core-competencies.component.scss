@@ -9,3 +9,30 @@
     padding: 0 72px;
     height: calc(100% - 93px);
 }
+
+.competencies{
+    padding: 67px 0;
+}
+
+.top_part{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    >div{
+        background-color: #679AAC;
+        min-width: 600px;
+        max-width: calc(50vw - 72px);
+        min-height: 140px;
+        border-radius: 4px;
+        padding: 32px;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0%;
+        line-height: 120%;
+        color: #F8F7E5;
+    }
+}
+
+.white{
+    color: #F8F7E5;
+}
