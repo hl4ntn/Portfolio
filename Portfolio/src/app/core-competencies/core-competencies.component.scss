@@ -12,6 +12,11 @@
 
 .competencies{
     padding: 67px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 20px;
 }
 
 .top_part{
@@ -35,4 +40,58 @@
 
 .white{
     color: #F8F7E5;
+}
+
+.bottom_part{
+    display: flex;
+    justify-content: space-between;
+}
+
+.turning_sun_div{
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+.turning_sun{
+    width: 120px;
+    height: 120px;
+}
+
+.heat_icon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 205px;
+    left: 40px;
+}
+
+.icons_box{
+    display: flex;
+    width: 640px;
+    height: 283px;
+    gap: 40px;
+    flex-wrap: wrap;
+    >div{
+        display: flex;
+        width: 96px;
+        height: 123px;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        color: #F8F7E5;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        >img{
+            width: 72px;
+            height: 72px;
+        }
+        >p{
+           margin: 0; 
+            text-align: center;
+        }
+    }
 }

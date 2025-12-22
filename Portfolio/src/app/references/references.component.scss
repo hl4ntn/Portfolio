@@ -9,3 +9,16 @@
     padding: 0 72px;
     height: calc(100% - 93px);
 }
+
+.comment_div{
+    width: 384px;
+    >p{
+        text-align: right;
+    }
+}
+
+.reference_box{
+        border: 1px solid #F8F7E5;
+        border-radius: 4px;
+        padding: 32px;
+}
