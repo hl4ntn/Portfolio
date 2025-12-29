@@ -8,4 +8,64 @@
     display: flex;
     padding: 0 72px;
     height: calc(100% - 93px);
+    justify-content: space-between;
+}
+
+h3{
+    color: #F9AF42;
+}
+
+h4{
+    color: #FF834F;
+    font-size: 24px;
+    line-height: 120%;
+}
+
+p{
+    color: #F8F7E5;
+    line-height: 120%;
+}
+
+.page{
+    display: flex;
+    flex-direction: row;
+    padding: 67px 52px;
+}
+
+.right_part{
+    width: 800px;
+    height: 370px;
+    background-color:#F9AF42;
+}
+
+.orange_sun{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    bottom: 0;
+    left: 72px;
+}
+
+.blue_sun{
+    width: 263px;
+    height: 263px;
+    position: absolute;
+    bottom: 0;
+    left: 183px;
+}
+
+.footer{
+    position: absolute;
+    width: 50vw;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    right: 72px;
+    color: #F8F7E5;
+    padding-bottom: 38px;
+    >div{
+        display: flex;
+        gap: 32px;
+    }
 }
