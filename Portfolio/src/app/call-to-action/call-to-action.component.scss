@@ -21,6 +21,13 @@ h4{
     line-height: 120%;
 }
 
+h5{
+    font-size: 24px;
+    line-height: 120%;
+    color: #F8F7E5;
+    margin: 0;
+}
+
 p{
     color: #F8F7E5;
     line-height: 120%;
@@ -30,12 +37,25 @@ p{
     display: flex;
     flex-direction: row;
     padding: 67px 52px;
+    gap: 124px;
+}
+
+.arrow_up{
+    width: 30px;
+    height: 48px;
+    position: absolute;
+    top: 160px;
+    right: 70px;
 }
 
 .right_part{
     width: 800px;
-    height: 370px;
-    background-color:#F9AF42;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    justify-content: end;
+    padding-bottom: 18vh;
+
 }
 
 .orange_sun{
@@ -53,6 +73,49 @@ p{
     bottom: 0;
     left: 183px;
 }
+
+.personal_data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.input{
+    margin: 0;
+    color: #FFFFFFCC;
+}
+
+.border_bottom{
+    border-bottom: 1px solid #F9AF42;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    padding-right: 30px;
+    height: 57px;
+ }
+
+ .short{
+    width: 238px;
+ }
+
+ button{
+    border-radius: 100px;
+    border: 1px solid #858585;
+    color: #858585;
+    background-color: #1D1D1D;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    width: 148px;
+    height: 40px;
+ }
+
+ .privacy_box{
+    display: flex;
+    gap: 8px;
+ }
 
 .footer{
     position: absolute;
