@@ -15,13 +15,17 @@ export class PagesService {
     { label: 'legal-notice', route: '/legal-notice' }
   ];
  currentPage = 0;
+ direction: 'up' | 'down' = 'down';
+
   constructor(private router: Router) { }
 
   goToPage(index: number) {
     const page = this.pages[index];
+    if (index < 0 || index > this.pages.length) return;
     if (page) {
+       this.direction = index > this.currentPage ? 'down' : 'up';
       this.currentPage = index;
-      console.log(this.currentPage);
+      console.log(this.currentPage, this.direction);
       this.router.navigate([page.route]);
     }
   }
