@@ -8,24 +8,24 @@
         </div>
         <div class="projects">
 
-            <div class="preview">
+            <div class="preview" [ngStyle]="{ 'background-color': projects[currentProject].bgcolor }">
                 <img class="icon" src="../../assets/imgs/icons/sun_icon_orange_180.png" als="orange sun icon">
-                <img class="screenshot" src="../../assets/imgs/projects/join.png" alt="screenshot join">
+                <img class="screenshot" [src]="projects[currentProject].screenshot" alt="screenshot project">
             </div>
             <div class="explanation_box">
                 <div class="project_presentation">
-                    <img src="../../assets/imgs/icons/green_checkmark.png" alt="checkmark">
-                    <h4>Join</h4>
-                    <p class="skills">HTML|CSS|Firebase|Angular|TypeScript</p>
-                    <p class="explanation_text">Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. </p>
+                    <img [style.width.px]="projects[currentProject].iconsize" [style.height.px]="projects[currentProject].iconsize" [src]="projects[currentProject].icon" alt="icon">
+                    <h4>{{projects[currentProject].title}}</h4>
+                    <p class="skills">{{projects[currentProject].skills}}</p>
+                    <p class="explanation_text">{{projects[currentProject].description}}</p>
                     <div>
-                        <button>GitHub <img src="../../assets/imgs/icons/arrow_right.png" alt="arrow right"></button>
-                        <button>Live Test <img src="../../assets/imgs/icons/arrow_right.png" alt="arrow right"></button>
+                        <a [href]="projects[currentProject].github" target="_blank">GitHub <img src="../../assets/imgs/icons/arrow_right.png" alt="arrow right"></a>
+                        <a  [href]="projects[currentProject].link" target="_blank">Live Test <img src="../../assets/imgs/icons/arrow_right.png" alt="arrow right"></a>
                     </div>
                 </div>
                 <div class="butttons_div">
-                    <pre>>> Previous project</pre>
-                    <pre>Next project >></pre>
+                    <pre  (click)="previousProject()"><< Previous project</pre>
+                    <pre  (click)="nextProject()">Next project >></pre>
                 </div>
             </div>
 
