@@ -39,6 +39,16 @@ export class AppComponent {
     window.addEventListener('wheel', this.handleScroll, { passive: false });
   }
 
+//   ngAfterViewInit() {
+   
+//     console.log('AfterViewInit läuft');
+//     const elements = document.querySelectorAll('.box');
+//   console.log('Boxes:', elements.length);
+// //  const elements = document.querySelectorAll('.animate-on-load');
+//     elements.forEach(el => el.classList.add('is-visible'));
+ 
+// }
+
  isAnimating = false;
 
   handleScroll = (event: WheelEvent) => {
