@@ -5,40 +5,67 @@ import { PagesService } from './pages.service';
 import { trigger, transition, style, animate, query, group } from '@angular/animations';
 
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet],
   template: `
-    <router-outlet></router-outlet>
+    <div [@routeAnimations]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
   `,
   styleUrl: './app.component.scss',
   animations: [
-  trigger('routeAnimation', [
-    transition('* => *', [
-      style({ opacity: 0 }),
-      animate('600ms ease', style({ opacity: 1 }))
+  trigger('routeAnimations', [
+      transition('* <=> *', [
+        // Alte Seite nach oben raus
+        query(':enter, :leave', style({ position: 'absolute', width: '100%' }), { optional: true }),
+        group([
+          query(':leave', [
+            animate('0.8s cubic-bezier(0.22, 1, 0.36, 1)',
+              style({ transform: 'translateY(-100vh)', opacity: 0 }))
+          ], { optional: true }),
+          query(':enter', [
+            style({ transform: 'translateY(100vh)', opacity: 0 }),
+            animate('0.8s cubic-bezier(0.22, 1, 0.36, 1)',
+              style({ transform: 'translateY(0)', opacity: 1 }))
+          ], { optional: true })
+        ])
+      ])
     ])
-  ])
-  ]})
-
+    ]
+})
 export class AppComponent {
 
   title = 'Portfolio';
-
+ isAnimating = false;
   getRouteState() {
     return location.pathname;
   }
+
+  //  prepareRoute(outlet: RouterOutlet) {
+  //   return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  // }
+
+
+
 
   constructor(public pageService: PagesService) {
       
     }
 
-  ngOnInit(){
-    this.pageService.goToPage(0);
-    window.addEventListener('wheel', this.handleScroll, { passive: false });
-  }
+  // ngOnInit(){
+  //   this.pageService.goToPage(0);
+  //   window.addEventListener('wheel', this.handleScroll, { passive: false });
+  // }
 
+ngAfterViewInit() {
+  setTimeout(() => {
+    this.pageService.goToPage(0);
+  });
+  window.addEventListener('wheel', this.handleScroll, { passive: false });
+}
 //   ngAfterViewInit() {
    
 //     console.log('AfterViewInit läuft');
@@ -49,7 +76,6 @@ export class AppComponent {
  
 // }
 
- isAnimating = false;
 
   handleScroll = (event: WheelEvent) => {
     event.preventDefault();
@@ -65,8 +91,14 @@ export class AppComponent {
 
     setTimeout(() => {
     this.isAnimating = false;
-  }, 500); 
+  }, 800); 
   };
+
+   prepareRoute(outlet: RouterOutlet) {
+    return outlet?.activatedRouteData?.['animation'] ?? null;
+  }
+
+  
 
 } 
     

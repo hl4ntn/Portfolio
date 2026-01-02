@@ -8,11 +8,11 @@ import { MyWorkComponent } from "./my-work/my-work.component";
 import { ReferencesComponent } from "./references/references.component";
 
 export const routes: Routes = [
- { path: '', component: LandingPageComponent },
-  { path: 'about', component: AboutMeComponent },
-  { path: 'competencies', component: CoreCompetenciesComponent },
-  { path: 'work', component: MyWorkComponent },
-  { path: 'references', component: ReferencesComponent },
-  { path: 'contact', component: CallToActionComponent },
-   { path: 'legal-notice', component: LegalNoticeComponent }
+ { path: '', component: LandingPageComponent, data: { animation: 'LandingPage'} },
+  { path: 'about', component: AboutMeComponent, data: { animation: 'AboutPage'} },
+  { path: 'competencies', component: CoreCompetenciesComponent, data: { animation: 'CompetenciesPage'} },
+  { path: 'work', component: MyWorkComponent, data: { animation: 'MyWorkPage'} },
+  { path: 'references', component: ReferencesComponent, data: { animation: 'ReferencesPage'} },
+  { path: 'contact', component: CallToActionComponent, data: { animation: 'ContactPage'} },
+   { path: 'legal-notice', component: LegalNoticeComponent, data: { animation: 'LegalNoticePage'} }
 ];
