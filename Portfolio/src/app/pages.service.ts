@@ -20,6 +20,7 @@ export class PagesService {
   constructor(private router: Router) { }
 
   goToPage(index: number) {
+    console.log(index)
     const page = this.pages[index];
     if (index < 0 || index > this.pages.length) return;
     if (page) {

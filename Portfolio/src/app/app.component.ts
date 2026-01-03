@@ -2,6 +2,13 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { PagesService } from './pages.service';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { ReferencesComponent } from './references/references.component';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { MyWorkComponent } from './my-work/my-work.component';
+import { CoreCompetenciesComponent } from './core-competencies/core-competencies.component';
+import { CallToActionComponent } from './call-to-action/call-to-action.component';
 import { trigger, transition, style, animate, query, group } from '@angular/animations';
 
 
@@ -9,7 +16,7 @@ import { trigger, transition, style, animate, query, group } from '@angular/anim
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, LandingPageComponent, AboutMeComponent, ReferencesComponent, LegalNoticeComponent, MyWorkComponent, CoreCompetenciesComponent, CallToActionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [
@@ -18,51 +25,18 @@ import { trigger, transition, style, animate, query, group } from '@angular/anim
 export class AppComponent{
 
   title = 'Portfolio';
-//  isAnimating = false;
-//   getRouteState() {
-//     return location.pathname;
-//   }
-
-  //  prepareRoute(outlet: RouterOutlet) {
-  //   return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
-  // }
-
-
-
-
-  constructor(public pageService: PagesService) {
-      
+  constructor(public pageService: PagesService) {  
     }
-
-  
 
   ngOnInit(){
     this.pageService.goToPage(0);
-    window.addEventListener('wheel', this.handleScroll, { passive: false });
-  }
-
-// ngAfterViewInit() {
-//   setTimeout(() => {
-//     this.pageService.goToPage(0);
-//   });
-//   window.addEventListener('wheel', this.handleScroll, { passive: false });
-// }
-//   ngAfterViewInit() {
-   
-//     console.log('AfterViewInit läuft');
-//     const elements = document.querySelectorAll('.box');
-//   console.log('Boxes:', elements.length);
-// //  const elements = document.querySelectorAll('.animate-on-load');
-//     elements.forEach(el => el.classList.add('is-visible'));
  
-// }
+  }
 
 
   handleScroll = (event: WheelEvent) => {
     event.preventDefault();
-    //  if (this.isAnimating) return;
 
-    //  this.isAnimating = true;
 
      if (event.deltaY > 0) {
        this.pageService.goToPage(this.pageService.currentPage + 1);
@@ -70,16 +44,8 @@ export class AppComponent{
       this.pageService.goToPage(this.pageService.currentPage - 1);
     }
 
-  //   setTimeout(() => {
-  //   this.isAnimating = false;
-  // }, 800); 
   };
 
-  //  prepareRoute(outlet: RouterOutlet) {
-  //   return outlet?.activatedRouteData?.['animation'] ?? null;
-  // }
-
-  
 
 } 
     

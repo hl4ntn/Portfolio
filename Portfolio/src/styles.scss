@@ -1,10 +1,15 @@
 html, body{
     margin: 0;
     height: 100vh;
+    scroll-snap-type: y mandatory;
 }
 
 *{
     font-family: 'Quicksand';
+}
+
+.scroll{
+  scroll-snap-align: start;
 }
 
 h1{

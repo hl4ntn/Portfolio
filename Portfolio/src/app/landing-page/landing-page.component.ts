@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PagesService } from '../pages.service';
 import { DotsComponent } from '../dots/dots.component';
-import * as AOS from 'aos';
 import { NavbarComponent1 } from '../navbar/navbar.component';
 
 @Component({
@@ -11,17 +10,11 @@ import { NavbarComponent1 } from '../navbar/navbar.component';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
-export class LandingPageComponent  implements OnInit{
+export class LandingPageComponent {
   constructor(public pageService: PagesService){
 
   }
 
-  ngOnInit(): void {
-      AOS.init({
-        duration: 800,
-        once: true
-      });
-    }
 }
 
 
