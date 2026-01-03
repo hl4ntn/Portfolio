@@ -9,9 +9,32 @@ section{
     display: flex;
     gap: 8px;
     height: 32px;
-    >img{
+    >.github{
+        background-image: url(./../../assets/imgs/icons/github.png);
         width: 32px;
         height: 32px;
+    }
+    .github:hover{
+        background-image: url(./../../assets/imgs/icons/github_orange.png);
+        cursor: pointer;
+    }
+    >.linkedin{
+        background-image: url(./../../assets/imgs/icons/linkedin.png);
+        width: 32px;
+        height: 32px;
+    }
+    .linkedin:hover{
+        background-image: url(./../../assets/imgs/icons/linkedin_orange.png);
+        cursor: pointer;
+    }
+    >.mail{
+        background-image: url(./../../assets/imgs/icons/mail.png);
+        width: 32px;
+        height: 32px;
+    }
+    .mail:hover{
+        background-image: url(./../../assets/imgs/icons/mail_orange.png);
+        cursor: pointer;
     }
 }
 
@@ -28,6 +51,19 @@ section{
         margin: 0;
         font-weight: 600;
     }
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.name_header:hover .black{
+    cursor: pointer;
+    color: #FF834F;
+}
+
+.name_header:hover .white{
+    cursor: pointer;
+    color: #FF834F;
 }
 
 .white{
@@ -42,10 +78,25 @@ section{
     display: flex;
     gap: 16px;
     align-items: center;
-    >img{
-       width: 32px;
+    .burger_menu_black{
+        width: 32px;
         height: 32px; 
+        background-image: url(./../../assets/imgs/icons/menu_black.png);
     }
+    .burger_menu_black:hover{
+        cursor: pointer; 
+        background-image: url(./../../assets/imgs/icons/menu_orange.png);
+    }
+    .burger_menu_white{
+        width: 32px;
+        height: 32px; 
+        background-image: url(./../../assets/imgs/icons/menu_white.png);
+    }
+    .burger_menu_white:hover{
+        cursor: pointer; 
+        background-image: url(./../../assets/imgs/icons/menu_orange.png);
+    }
+    
 }
 
 button{
@@ -61,6 +112,11 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+button:hover{
+    background-color: #FF834F;
+    cursor: pointer;
 }
 
 .btn_black{

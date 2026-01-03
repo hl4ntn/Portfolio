@@ -40,6 +40,10 @@
             align-items: center;
         justify-content: center;
     }
+    button:hover{
+        background-color: #FF834F;
+        cursor: pointer;
+    }
 }
 
 .margin20{
@@ -60,6 +64,7 @@
     >.scroll_icon{
         height: 144px;
         width: 144px;
+        animation: turn 8s linear infinite;
     }
     >.arrow_down{
         width: 38.57px;
@@ -67,6 +72,15 @@
         position: absolute;
         left: 54px;
         top: 50px;
+    }
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
     }
 }
 
