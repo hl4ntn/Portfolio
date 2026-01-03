@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { DotsComponent } from '../dots/dots.component';
 import { NavbarComponent1 } from '../navbar/navbar.component';
 import { CommonModule } from '@angular/common';
@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './my-work.component.html',
   styleUrl: './my-work.component.scss'
 })
-export class MyWorkComponent {
+export class MyWorkComponent  implements AfterViewInit {
   currentProject = 0;
 
   projects = [
@@ -53,6 +53,23 @@ export class MyWorkComponent {
     },
   ]
 
+  
+
+  ngAfterViewInit() {
+    const el = document.getElementById('3');
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          console.log('Page 3 ist sichtbar');
+        }
+      },
+      { threshold: 0.6 }
+    );
+    observer.observe(el);
+  }
+
   previousProject(){
     if (this.currentProject > 0) {
       this.currentProject--;
@@ -68,4 +85,5 @@ export class MyWorkComponent {
       this.currentProject = 0;
     }
   }
+
 }

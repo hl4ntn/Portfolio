@@ -3,9 +3,9 @@
             @if(pageService.currentPage === $index){
                 <div class="diamont"></div>
             } @else if(pageService.currentPage % 2 === 0  || pageService.currentPage > 4){
-                <div (click)="pageService.goToPage($index)" class="dot white"></div>
+                <a  [href]="'#' + $index" (click)="this.pageService.setSection($index)" class="dot white"></a>
             } @else {
-               <div (click)="pageService.goToPage($index)" class="dot black"></div>
+               <a  [href]="'#' + $index"  (click)="this.pageService.setSection($index)" class="dot black"></a>
             }
         }
     </div>

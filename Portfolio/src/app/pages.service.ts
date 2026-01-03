@@ -30,4 +30,9 @@ export class PagesService {
       this.router.navigate([page.route]);
     }
   }
+
+  setSection(index: number){
+    console.log(index);
+    this.currentPage = index;
+  }
 }
