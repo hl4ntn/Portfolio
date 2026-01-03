@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DotsComponent } from '../dots/dots.component';
 import { NavbarComponent1 } from '../navbar/navbar.component';
 import { CommonModule } from '@angular/common';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-my-work',
@@ -10,7 +11,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './my-work.component.html',
   styleUrl: './my-work.component.scss'
 })
-export class MyWorkComponent {
+export class MyWorkComponent implements OnInit {
   currentProject = 0;
 
   projects = [
@@ -51,6 +52,13 @@ export class MyWorkComponent {
       iconsize: '60',
     },
   ]
+
+   ngOnInit(): void {
+        AOS.init({
+          duration: 800,
+          once: true
+        });
+      }
 
   previousProject(){
     if (this.currentProject > 0) {
