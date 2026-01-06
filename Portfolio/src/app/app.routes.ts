@@ -14,5 +14,4 @@ export const routes: Routes = [
   { path: 'work', component: MyWorkComponent, data: { animation: 'MyWorkPage'} },
   { path: 'references', component: ReferencesComponent, data: { animation: 'ReferencesPage'} },
   { path: 'contact', component: CallToActionComponent, data: { animation: 'ContactPage'} },
-   { path: 'legal-notice', component: LegalNoticeComponent, data: { animation: 'LegalNoticePage'} }
 ];

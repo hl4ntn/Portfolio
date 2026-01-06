@@ -1,7 +1,7 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { DotsComponent } from '../dots/dots.component';
 import { NavbarComponent1 } from '../navbar/navbar.component';
-
+import { PagesService } from '../pages.service';
 
 @Component({
   selector: 'app-references',
@@ -12,6 +12,9 @@ import { NavbarComponent1 } from '../navbar/navbar.component';
 })
 export class ReferencesComponent implements AfterViewInit {
 
+   constructor(public pageService: PagesService) {  
+    }
+
   ngAfterViewInit() {
     const el = document.getElementById('4');
     if (!el) return;
@@ -19,7 +22,9 @@ export class ReferencesComponent implements AfterViewInit {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          this.pageService.currentPage = 4;
           console.log('Page 4 ist sichtbar');
+          history.replaceState(null, "", `#${'references'}`);
         }
       },
       { threshold: 0.6 }

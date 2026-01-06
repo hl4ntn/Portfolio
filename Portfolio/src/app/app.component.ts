@@ -34,17 +34,17 @@ export class AppComponent{
   }
 
 
-  handleScroll = (event: WheelEvent) => {
-    event.preventDefault();
+  // handleScroll = (event: WheelEvent) => {
+  //   event.preventDefault();
 
 
-     if (event.deltaY > 0) {
-       this.pageService.goToPage(this.pageService.currentPage + 1);
-    } else {
-      this.pageService.goToPage(this.pageService.currentPage - 1);
-    }
+  //    if (event.deltaY > 0) {
+  //      this.pageService.goToPage(this.pageService.currentPage + 1);
+  //   } else {
+  //     this.pageService.goToPage(this.pageService.currentPage - 1);
+  //   }
 
-  };
+  // };
 
 
 } 

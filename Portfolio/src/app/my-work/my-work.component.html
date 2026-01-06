@@ -1,49 +1,80 @@
 <div id="3" class="page scroll">
-<app-navbar1></app-navbar1>
-<div class="main">
-    <div class="content">
-        <div class="heading">
-            <h3>My work</h3>
-            <p>Explore a selection of my work here - Interact with the projects to see my skills in action.</p>
-        </div>
-        <div class="projects">
-
-            <div class="preview" [ngStyle]="{ 'background-color': projects[currentProject].bgcolor }">
-                <img class="icon" src="../../assets/imgs/icons/sun_icon_orange_180.png" als="orange sun icon">
-                <img class="screenshot" [src]="projects[currentProject].screenshot" alt="screenshot project">
+    <app-navbar1></app-navbar1>
+    <div class="main">
+        <div class="content">
+            <div class="heading">
+                <h3>My work</h3>
+                <p>Explore a selection of my work here - Interact with the projects to see my skills in action.</p>
             </div>
-            <div class="explanation_box">
-                <div class="project_presentation">
-                    <img [style.width.px]="projects[currentProject].iconsize" [style.height.px]="projects[currentProject].iconsize" [src]="projects[currentProject].icon" alt="icon">
-                    <h4>{{projects[currentProject].title}}</h4>
-                    <p class="skills">{{projects[currentProject].skills}}</p>
-                    <p class="explanation_text">{{projects[currentProject].description}}</p>
-                    <div>
-                        <a [href]="projects[currentProject].github" target="_blank">GitHub <img src="../../assets/imgs/icons/arrow_right.png" alt="arrow right"></a>
-                        <a  [href]="projects[currentProject].link" target="_blank">Live Test <img src="../../assets/imgs/icons/arrow_right.png" alt="arrow right"></a>
+            <div class="projects">
+
+                <div class="preview" [ngStyle]="{ 'background-color': projects[currentProject].bgcolor }">
+                    <img class="icon {{projects[currentProject].suncolor}}"
+                        src="../../assets/imgs/icons/sun_icon_orange_180.png" als="orange sun icon">
+                    <img class="screenshot" [src]="projects[currentProject].screenshot" alt="screenshot project">
+                </div>
+                <div class="explanation_box">
+                    <div class="project_presentation">
+                        <img [src]="projects[currentProject].icon" alt="icon">
+                        <div class="hover-div">
+                            <h4>More about me</h4>
+                            <div class="skills">
+                                <div>
+                                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                                    <p>Team player</p>
+                                </div>
+                                <div>
+                                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                                    <p>Continously learning</p>
+                                </div>
+                                <div>
+                                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                                    <p>Creative Thinker</p>
+                                </div>
+                                <div>
+                                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                                    <p>Based in Munich</p>
+                                </div>
+                                <div>
+                                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                                    <p>Open to work remote</p>
+                                </div>
+                                <div>
+                                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                                    <p>Open to relocate</p>
+                                </div>
+                            </div>
+                            <h4>{{projects[currentProject].title}}</h4>
+                            <p class="skills">{{projects[currentProject].skills}}</p>
+                            <p class="explanation_text">{{projects[currentProject].description}}</p>
+                            <div>
+                                <a [href]="projects[currentProject].github" target="_blank">GitHub <img class="rotate"
+                                        src="../../assets/imgs/icons/arrow_right.png" alt="arrow right"></a>
+                                <a [href]="projects[currentProject].link" target="_blank">Live Test <img class="rotate"
+                                        src="../../assets/imgs/icons/arrow_right.png" alt="arrow right"></a>
+                            </div>
+                        </div>
+                        <div class="butttons_div">
+                            <pre (click)="previousProject()"><< Previous project</pre>
+                            <pre (click)="nextProject()">Next project >></pre>
+                        </div>
                     </div>
+
+
+
+
+
+
+
+
+
                 </div>
-                <div class="butttons_div">
-                    <pre  (click)="previousProject()"><< Previous project</pre>
-                    <pre  (click)="nextProject()">Next project >></pre>
-                </div>
+
+
+
+
+
             </div>
-
-
-
-
-
-
-
-
-            
+            <app-dots></app-dots>
         </div>
-
-
-
-
-
     </div>
-<app-dots></app-dots>
-</div>
-</div>

@@ -12,7 +12,6 @@ export class PagesService {
     { label: 'work', route: '/work' },
     { label: 'references', route: '/references' },
     { label: 'contact', route: '/contact' },
-    { label: 'legal-notice', route: '/legal-notice' }
   ];
  currentPage = 0;
  direction: 'up' | 'down' = 'down';

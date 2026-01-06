@@ -3,6 +3,7 @@ import { PagesService } from '../pages.service';
 import { DotsComponent } from '../dots/dots.component';
 import { NavbarComponent1 } from '../navbar/navbar.component';
 
+
 @Component({
   selector: 'app-landing-page',
   standalone: true,
@@ -22,7 +23,9 @@ export class LandingPageComponent implements AfterViewInit {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          this.pageService.currentPage = 0;
           console.log('Page 0 ist sichtbar');
+          history.replaceState(null, "", `#${'HLA'}`);
         }
       },
       { threshold: 0.6 }

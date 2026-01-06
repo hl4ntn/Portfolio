@@ -1,7 +1,7 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { DotsComponent } from '../dots/dots.component';
 import { NavbarComponent1 } from '../navbar/navbar.component';
-
+import { PagesService } from '../pages.service';
 
 @Component({
   selector: 'app-core-competencies',
@@ -11,6 +11,8 @@ import { NavbarComponent1 } from '../navbar/navbar.component';
   styleUrl: './core-competencies.component.scss'
 })
 export class CoreCompetenciesComponent implements AfterViewInit {
+   constructor(public pageService: PagesService) {  
+    }
  ngAfterViewInit() {
     const el = document.getElementById('2');
     if (!el) return;
@@ -18,7 +20,9 @@ export class CoreCompetenciesComponent implements AfterViewInit {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          this.pageService.currentPage = 2;
           console.log('Page 2 ist sichtbar');
+          history.replaceState(null, "", `#${'competencies'}`);
         }
       },
       { threshold: 0.6 }
