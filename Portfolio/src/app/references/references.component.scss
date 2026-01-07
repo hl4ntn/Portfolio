@@ -65,6 +65,10 @@ h3{
         font-weight: 700;
         font-size: 18px;
         line-height: 120%;
+        &:hover{
+                cursor: pointer;
+                color: #FF834F;
+            }
     }
 }
 
@@ -79,6 +83,15 @@ h3{
         gap: 10px;
         display: flex;
         flex-direction: column;
+        position: relative;
+        img{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 32px;
+            right: 32px;
+            visibility: hidden;
+        }
         h4{
             display: flex;
             font-size: 24px;
@@ -96,4 +109,8 @@ h3{
 .bold{
     font-weight: 700;
     font-size: 18px;
+}
+
+.reference_box:hover img{
+    visibility: visible;
 }
