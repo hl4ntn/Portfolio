@@ -17,33 +17,14 @@
                     <div class="project_presentation">
                         <img [src]="projects[currentProject].icon" alt="icon">
                         <div class="hover-div">
-                            <h4>More about me</h4>
-                            <div class="skills">
-                                <div>
-                                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                                    <p>Team player</p>
-                                </div>
-                                <div>
-                                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                                    <p>Continously learning</p>
-                                </div>
-                                <div>
-                                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                                    <p>Creative Thinker</p>
-                                </div>
-                                <div>
-                                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                                    <p>Based in Munich</p>
-                                </div>
-                                <div>
-                                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                                    <p>Open to work remote</p>
-                                </div>
-                                <div>
-                                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                                    <p>Open to relocate</p>
-                                </div>
+                           
+                            <div class="project_description">
+
+                                
+                                    <p>{{projects[currentProject].participation}}</p>
+                                
                             </div>
+                        </div>
                             <h4>{{projects[currentProject].title}}</h4>
                             <p class="skills">{{projects[currentProject].skills}}</p>
                             <p class="explanation_text">{{projects[currentProject].description}}</p>
@@ -75,6 +56,6 @@
 
 
             </div>
-            <app-dots></app-dots>
-        </div>
+            
+        <app-dots></app-dots>
     </div>
