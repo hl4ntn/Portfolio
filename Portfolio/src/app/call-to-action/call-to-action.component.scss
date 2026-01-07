@@ -41,12 +41,32 @@ p{
     gap: 124px;
 }
 
+.arrow_div{
+    position: absolute;
+    height: 88px;
+    
+    top: 160px;
+    right: 70px;
+    width: 30px;
+    display: flex;
+    align-items: flex-end;
+    &:hover{
+        border-bottom: 1px solid #FF834F;
+        cursor: pointer;
+    }
+}
+
+.arrow_div:hover .arrow_up{
+    background-image: url(../../assets/imgs/icons/arrow_up_hover.png);
+}
+
 .arrow_up{
     width: 30px;
     height: 48px;
-    position: absolute;
-    top: 160px;
-    right: 70px;
+    background-image: url(../../assets/imgs/icons/arrow_up.png);
+    animation: arrowJump 500ms ease-in 10ms infinite alternate;
+    transform-origin: center bottom;
+    
 }
 
 .right_part{
@@ -65,6 +85,7 @@ p{
     position: absolute;
     bottom: 0;
     left: 72px;
+    animation: turn_right 8s linear infinite;
 }
 
 .blue_sun{
@@ -73,6 +94,7 @@ p{
     position: absolute;
     bottom: 0;
     left: 183px;
+    animation: turn_left 8s linear infinite;
 }
 
 .personal_data{
@@ -85,6 +107,14 @@ p{
 .input{
     margin: 0;
     color: #FFFFFFCC;
+    a{
+        color: #FF834F;
+    &:hover{
+        cursor: pointer;
+        color: #FFFFFF;
+        font-weight: 700;
+    }
+    }
 }
 
 .border_bottom{
@@ -95,7 +125,22 @@ p{
     padding: 16px;
     padding-right: 30px;
     height: 57px;
+    &:hover{
+        border-bottom: 1px solid #FF834F;
+        cursor: pointer;
+    }
  }
+
+ .border_bottom:hover h5{
+    color: #FF834F;
+    
+ }
+
+ .border_bottom:hover .input{
+    color: #F8F7E5;
+ }
+
+
 
  .short{
     width: 238px;
@@ -103,8 +148,6 @@ p{
 
  button{
     border-radius: 100px;
-    border: 1px solid #858585;
-    color: #858585;
     background-color: #1D1D1D;
     font-weight: 700;
     font-size: 18px;
@@ -113,9 +156,50 @@ p{
     height: 40px;
  }
 
+ button:disabled{
+    border: 1px solid #858585;
+    color: #858585;
+ }
+
+ button:enabled {
+    border: 1px solid #F8F7E5;
+    color: #F8F7E5;
+    &:hover{
+        background-color: #FF834F;
+        cursor: pointer;
+    }
+}
+
  .privacy_box{
     display: flex;
     gap: 8px;
+    align-items: center;
+ }
+
+ .checkmark{
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 2.5px;
+    width: 20px;
+    height: 20px;
+    &:hover{
+        cursor: pointer;
+    }
+ }
+
+ .active{
+    background-image: url(../../assets/imgs/icons/checkmark_checked.png);
+    &:hover{
+        background-image: url(../../assets/imgs/icons/checkmark_checked_hover.png);
+    }
+
+ }
+
+ .inactive{
+    background-image: url(../../assets/imgs/icons/checkmark.png);
+    &:hover{
+        background-image: url(../../assets/imgs/icons/checkmark_hover.png);
+    }
  }
 
 .footer{
@@ -131,5 +215,43 @@ p{
     >div{
         display: flex;
         gap: 32px;
+        >p{
+            &:hover{
+                cursor: pointer;
+                color: #FF834F;
+            }
+        }
     }
 }
+
+
+
+@keyframes turn_right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    }
+}
+
+@keyframes turn_left {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+    }
+}
+
+@keyframes arrowJump {
+   0% {
+    transform: translateY(0) scaleY(0.85);
+  }
+  100% {
+    transform: translateY(-45px) scaleY(1.4);
+  }
+  
+
+}
+

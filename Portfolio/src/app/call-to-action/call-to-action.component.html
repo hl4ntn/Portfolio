@@ -5,7 +5,7 @@
         
         <img class="orange_sun" src="../../assets/imgs/icons/sun_icon_orange_180.png" alt="turning sun icon orange">
         <img class="blue_sun" src="../../assets/imgs/icons/sun_blue.png" alt="turning sun icon blue">
-        <img class="arrow_up" src="../../assets/imgs/icons/arrow_up.png" alt="arrow up">
+        <div class="arrow_div"><div class="arrow_up"></div></div>
     
         <div class="left_part" style="min-width: 528px;">
             <h3>Lets build something Cool together!</h3>
@@ -33,11 +33,14 @@
                 <p class="input">Hello Lukas, I am interested in...</p>
             </div>
             <div class="privacy_box">
-                <img style="margin: 2.5px;" src="../../assets/imgs/icons/checkmark.png" alt="checkmark">
-                <p class="input">I've read the <a style=color:#FF834F>privacy policy</a> and agree to the processing of my data.</p>
+                <div class="checkmark"
+                [class.active]="isActive"
+            [class.inactive]="!isActive"
+            (click)="toggle()"></div>
+                <p class="input">I've read the <a>privacy policy</a> and agree to the processing of my data.</p>
             </div>
             <div style="text-align: center;">
-            <button>Drop a Line</button>
+            <button [disabled]="!isActive">Drop a Line</button>
             </div>
 
         </div>

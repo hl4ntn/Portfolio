@@ -12,6 +12,7 @@ import { PagesService } from '../pages.service';
   styleUrl: './call-to-action.component.scss'
 })
 export class CallToActionComponent implements AfterViewInit {
+isActive = false;
 
   constructor(public pageService: PagesService) {  
       }
@@ -33,4 +34,11 @@ export class CallToActionComponent implements AfterViewInit {
     );
     observer.observe(el);
   }
+
+  toggle() {
+    this.isActive = !this.isActive;
+  }
+  
 }
+
+
