@@ -11,15 +11,21 @@
     flex-direction: column;
 }
 
+.content_wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 0 72px;
+    flex-direction: row;
+}
+
 
 .main{
     display: flex;
-    padding: 0 72px;
+    padding-top: 72px;
     min-height: 0;
     justify-content: space-between;
-    padding-top: 72px;
     flex: 1 1 auto;
-        position: relative;
+    position: relative;
 }
 
 .text_box{
@@ -144,6 +150,7 @@ h4{
 
 .left_part{
     padding-left: 40px;
+    height: calc(100vh - 165px);
     >img{
         height: 100%;
     }

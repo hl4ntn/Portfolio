@@ -10,6 +10,9 @@ import { PagesService } from '../pages.service';
   styleUrl: './dots.component.scss'
 })
 export class DotsComponent {
+
+  diamontColors = ['yellow','yellow','yellow','yellow','yellow', 'orange'];
+
   constructor(public pageService: PagesService) {
     
   }

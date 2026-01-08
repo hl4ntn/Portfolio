@@ -1,7 +1,7 @@
  <div class="dots">
         @for(page of pageService.pages; track page){
             @if(pageService.currentPage === $index){
-                <div class="diamont"></div>
+                <div class="diamont" [ngClass]='diamontColors[$index]'></div>
             } @else if(pageService.currentPage % 2 === 0  || pageService.currentPage > 4){
                 <a  [href]="'#' + $index" (click)="this.pageService.setSection($index)" class="dot white"></a>
             } @else {
