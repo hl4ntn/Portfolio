@@ -19,18 +19,18 @@
             <div class="personal_data">
                 <div class="border_bottom short">
                     <h5>What's yout name?</h5>
-                    <p class="input">Your name goes here</p>
-                    <div class="spaceholder"></div>
+                    <input (click)="emptyInput('inputName')" [(ngModel)]="inputName" type="text" class="input">
+                   
                 </div>
                 <div class="border_bottom short">
                     <h5>What's yout email?</h5>
-                    <p class="input">youremail&#64;email.com</p>
-                    <div class="spaceholder"></div>
+                    <input (click)="emptyInput('inputEmail')" [(ngModel)]="inputEmail" type="text" class="input">
+                    
                 </div>
             </div>
             <div class="border_bottom">
                 <h5>How can I help you?</h5>
-                <p class="input">Hello Lukas, I am interested in...</p>
+                <input (click)="emptyInput('inputMessage')" [(ngModel)]="inputMessage" type="text" class="input">
             </div>
             <div class="privacy_box">
                 <div class="checkmark"
@@ -40,7 +40,7 @@
                 <p class="input">I've read the <a>privacy policy</a> and agree to the processing of my data.</p>
             </div>
             <div style="text-align: center;">
-            <button [disabled]="!isActive">Drop a Line</button>
+            <button [disabled]="!isActive" (click)="sendInputData()">Drop a Line</button>
             </div>
 
         </div>

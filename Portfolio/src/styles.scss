@@ -2,6 +2,7 @@ html, body{
     margin: 0;
     height: 100vh;
     scroll-snap-type: y mandatory;
+        scrollbar-width: none;
 }
 
 *{

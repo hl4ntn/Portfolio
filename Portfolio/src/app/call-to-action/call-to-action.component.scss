@@ -107,6 +107,10 @@ p{
 .input{
     margin: 0;
     color: #FFFFFFCC;
+    background-color:#1D1D1D;
+    border: 0;
+    line-height: 120%;
+    font-size: 16px;
     a{
         color: #FF834F;
     &:hover{
@@ -116,6 +120,8 @@ p{
     }
     }
 }
+
+input:focus {outline:none!important;}
 
 .border_bottom{
     border-bottom: 1px solid #F9AF42;
