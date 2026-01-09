@@ -15,9 +15,13 @@ import { FormsModule } from '@angular/forms';
 })
 export class CallToActionComponent implements AfterViewInit {
 isActive = false;
+missingNameData = false;
+missingEmailData = false;
+missingMessageData = false;
 inputName = "Your name goes here";
 inputEmail = "youremail@email.com";
 inputMessage = "Hello Hannah, I am interested in...";
+privacyAlert = true;
 currentData = {
   name: '',
   email: '',
@@ -47,35 +51,82 @@ currentData = {
 
   toggle() {
     this.isActive = !this.isActive;
+    if (this.isActive){
+      this.privacyAlert = true;
+    } else {
+      this.privacyAlert = false;
+    }
   }
 
   sendInputData(){
+
+    this.saveNameInput();
+    this.saveEmailInput();
+    this.saveMessageInput();
     
-    if (this.inputName != "Your name goes here"){
-      console.log(this.inputName);
-    } else{
-      this.showAlert('inputName');
-    }
-    if (this.inputEmail != "youremail@email.com") {
-      console.log(this.inputEmail);
-    } else{
-      this.showAlert('inputEmail');
-    }
-    if(this.inputMessage != "Hello Hannah, I am interested in..."){
-      console.log(this.inputMessage);
-    } else{
-      this.showAlert('inputMessage');
-    }
+    this.checkAllData();
     
+    
+    
+   
+    
+  }
+
+  saveNameInput(){
+    if (this.inputName != "Your name goes here" && this.inputName != ""){
+        this.currentData.name = this.inputName;
+    }
+  }
+
+  saveEmailInput(){
+    if (this.inputEmail != "youremail@email.com" && this.inputEmail != "") {
+        this.currentData.email = this.inputEmail;
+    }
+  }
+
+  saveMessageInput(){
+    if(this.inputMessage != "Hello Hannah, I am interested in..." && this.inputMessage != ""){
+        this.currentData.message = this.inputMessage;
+    }
+  }
+
+  checkAllData(){
+    if (this.currentData.name == ''){
+        this.showAlert('inputName', 'Oops! it seems your name is missing');
+        this.missingNameData = true;
+    } else if (this.currentData.email == '') {
+        this.showAlert('inputEmail', 'Hoppla! your email is required');
+        this.missingEmailData = true;
+    } else if(this.currentData.message == '') {
+        this.showAlert('inputMessage', 'What do you need to develop?');
+        this.missingMessageData = true;
+    } else {
+      console.log(this.currentData);
+      this.emptyInput('inputName');
+      this.emptyInput('inputEmail');
+      this.emptyInput('inputMessage');
+      this.emptyJson();
+    }
+  }
+
+  emptyJson(){
+    this.currentData = {
+    name: '',
+    email: '',
+    message: '',
+    };
   }
 
   emptyInput(input:any){
      (this as any)[input] = '';
+     this.missingNameData = false;
+     this.missingEmailData = false;
+     this.missingMessageData = false;
     
   }
 
-  showAlert(input: any){
-    (this as any)[input] = "Oops! it seems your name is missing";
+  showAlert(inputId: string, input: string){
+    (this as any)[inputId] = input;
   }
   
 }
