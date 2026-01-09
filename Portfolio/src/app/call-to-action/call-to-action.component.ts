@@ -3,13 +3,14 @@ import { DotsComponent } from '../dots/dots.component';
 import { NavbarComponent1 } from '../navbar/navbar.component';
 import { PagesService } from '../pages.service';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-call-to-action',
   standalone: true,
-  imports: [NavbarComponent1, DotsComponent, FormsModule],
+  imports: [NavbarComponent1, DotsComponent, FormsModule, RouterLink],
   templateUrl: './call-to-action.component.html',
   styleUrl: './call-to-action.component.scss'
 })

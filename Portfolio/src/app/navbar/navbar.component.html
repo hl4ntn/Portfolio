@@ -1,8 +1,8 @@
 @if(pageService.currentPage === 0){
     <section>
     <div class="socials">
-        <div class="github"></div>
-        <div class="linkedin"></div>
+        <a class="github" href="https://github.com/hl4ntn" target="_blank"> </a>
+        <a class="linkedin" href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank"></a>
         <div class="mail"></div>
         
     </div>
@@ -17,10 +17,10 @@
 </section>
             } @else if(pageService.currentPage % 2 === 0 || pageService.currentPage > 4){
                 <section>
-    <div (click)="pageService.goToPage(0)" class="name_header">
+    <a style="text-decoration: none;" [href]="'#0'"><div class="name_header">
         <img src="./../../../assets/imgs/icons/logo.png" alt="logo">
         <p class="white">H.L.A.</p>
-    </div>
+    </div></a>
     <div class="menu-options">
         <button class="btn_white">EN</button>
         <div class="burger_menu_white"></div>
@@ -29,10 +29,10 @@
             } @else {
 
 
-               <section><div  (click)="pageService.goToPage(0)" class="name_header">
+               <section><a style="text-decoration: none;" [href]="'#0'"><div  class="name_header">
         <img src="./../../../assets/imgs/icons/logo.png" alt="logo">
         <p class="black">H.L.A.</p>
-    </div>
+    </div></a>
     <div class="menu-options">
         <button class="btn_black">EN</button>
         <div class="burger_menu_black"></div>

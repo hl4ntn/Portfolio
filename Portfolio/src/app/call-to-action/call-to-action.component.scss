@@ -113,6 +113,7 @@ p{
     font-size: 16px;
     a{
         color: #FF834F;
+        text-decoration: none;
     &:hover{
         cursor: pointer;
         color: #FFFFFF;
@@ -236,7 +237,11 @@ input:focus {outline:none!important;}
     >div{
         display: flex;
         gap: 32px;
-        >p{
+        align-items: center;
+        >a{
+            text-decoration: none;
+            color: #F8F7E5;
+            line-height: 120%;
             &:hover{
                 cursor: pointer;
                 color: #FF834F;

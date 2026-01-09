@@ -1,17 +1,11 @@
 import { Routes } from '@angular/router';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { AboutMeComponent } from "./about-me/about-me.component";
-import { LegalNoticeComponent } from "./legal-notice/legal-notice.component";
-import { CallToActionComponent } from "./call-to-action/call-to-action.component";
-import { CoreCompetenciesComponent } from "./core-competencies/core-competencies.component";
-import { MyWorkComponent } from "./my-work/my-work.component";
-import { ReferencesComponent } from "./references/references.component";
+
+import { MaincontentComponent } from './maincomponent/maincontent.component';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
- { path: '', component: LandingPageComponent, data: { animation: 'LandingPage'} },
-  { path: 'about', component: AboutMeComponent, data: { animation: 'AboutPage'} },
-  { path: 'competencies', component: CoreCompetenciesComponent, data: { animation: 'CompetenciesPage'} },
-  { path: 'work', component: MyWorkComponent, data: { animation: 'MyWorkPage'} },
-  { path: 'references', component: ReferencesComponent, data: { animation: 'ReferencesPage'} },
-  { path: 'contact', component: CallToActionComponent, data: { animation: 'ContactPage'} },
+   { path: '', component: MaincontentComponent},
+   { path: 'imprint', component: LegalNoticeComponent},
+   { path: 'privacypolicy', component: PrivacyPolicyComponent},
 ];

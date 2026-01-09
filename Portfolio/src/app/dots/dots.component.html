@@ -3,9 +3,9 @@
             @if(pageService.currentPage === $index){
                 <div class="diamont" [ngClass]='diamontColors[$index]'></div>
             } @else if(pageService.currentPage % 2 === 0  || pageService.currentPage > 4){
-                <a  [href]="'#' + $index" (click)="this.pageService.setSection($index)" class="dot white"></a>
+                <a  [href]="'#' + $index"  class="dot white"></a>
             } @else {
-               <a  [href]="'#' + $index"  (click)="this.pageService.setSection($index)" class="dot black"></a>
+               <a  [href]="'#' + $index"   class="dot black"></a>
             }
         }
     </div>

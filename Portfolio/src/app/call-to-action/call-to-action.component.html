@@ -5,7 +5,7 @@
         
         <img class="orange_sun" src="../../assets/imgs/icons/sun_icon_orange_180.png" alt="turning sun icon orange">
         <img class="blue_sun" src="../../assets/imgs/icons/sun_blue.png" alt="turning sun icon blue">
-        <div class="arrow_div"><div class="arrow_up"></div></div>
+        <a [href]="'#0'"><div class="arrow_div"><div class="arrow_up"></div></div></a>
     
         <div class="left_part" style="min-width: 528px;">
             <h3>Lets build something Cool together!</h3>
@@ -35,8 +35,9 @@
             <div style="display: flex; flex-direction: column; gap: 16px;">
             <div style="height: 52.2px;">
             <div class="privacy_box">
-                <div class="checkmark" [class.active]="isActive" [class.inactive]="!isActive" (click)="toggle()"></div>
-                <p class="input">I've read the <a>privacy policy</a> and agree to the processing of my data.</p>
+                <div class="checkmark" [class.active]="isActive" [class.inactive]="!isActive" (click)="toggle()">
+                </div>
+                <p class="input">I've read the <a routerLink="/privacypolicy">privacy policy</a> and agree to the processing of my data.</p>
             </div>
             <p class="privacy_alert" [class.privacy_alert_active]="!privacyAlert">Please accept the privacy policy.</p>
             </div>
@@ -49,9 +50,9 @@
         <div class="footer">
             <p>© Hannah Luisa Anton 2026</p>
             <div>
-            <p>Impressum</p>
-            <p>LinkedIn</p>
-            <p>GitHub</p>
+            <a routerLink="/imprint">Impressum</a>
+            <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/hl4ntn" target="_blank">GitHub</a>
         </div>
         </div>
 

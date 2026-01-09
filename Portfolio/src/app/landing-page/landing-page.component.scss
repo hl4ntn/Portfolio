@@ -26,22 +26,24 @@
     justify-content: space-between;
     flex-direction: column;
     padding-bottom: 72px;
-    button{
+    a{
+        text-decoration: none;
+        margin-top: 24px;
         background-color: transparent;
         border-radius: 100px;
-        width: 155px;
-        height: 40px;
+        width: 107px;
+        height: 16px;
         border: 1px solid #F8F7E5;
-        padding: 24px 12px;
+        padding: 12px 24px;
         display: flex;
         color: #F8F7E5;
         font-size: 18px;
         font-weight: 800;
         line-height: 120%;
-            align-items: center;
+        align-items: center;
         justify-content: center;
     }
-    button:hover{
+    a:hover{
         background-color: #FF834F;
         cursor: pointer;
     }
