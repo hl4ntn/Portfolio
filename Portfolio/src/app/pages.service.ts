@@ -34,4 +34,9 @@ export class PagesService {
   //   console.log(index);
   //   this.currentPage = index;
   // }
+
+  goToPage(index: number){
+    this.currentPage = index;
+    console.log(this.currentPage)
+  }
 }

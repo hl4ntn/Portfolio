@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { NavbarComponent1 } from '../navbar/navbar.component';
-
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-legal-notice',
   standalone: true,
-  imports: [NavbarComponent1],
+  imports: [RouterLink],
   templateUrl: './legal-notice.component.html',
   styleUrl: './legal-notice.component.scss'
 })
