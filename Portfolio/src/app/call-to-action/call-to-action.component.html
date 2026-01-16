@@ -15,22 +15,23 @@
             </div>
 
         </div>
-        <div class="right_part">
-            <div class="personal_data">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="right_part">
+            <div class="personal_data" >
                 <div class="border_bottom short">
-                    <h5>What's yout name?</h5>
-                    <input [class.red]="missingNameData" (click)="emptyInput('inputName')" [(ngModel)]="inputName" type="text" class="input">
+                    <h5 for="name">What's yout name?</h5>
+                    <input [(ngModel)]="currentData.name" name="name" [class.red]="missingNameData" id="name" [placeholder]="contactForm.submitted && contactForm.controls['name']?.invalid? 'Oops! it seems your name is missing': 'Your name goes here'" type="text" class="input" required>
                    
                 </div>
                 <div class="border_bottom short">
-                    <h5>What's yout email?</h5>
-                    <input [class.red]="missingEmailData"  (click)="emptyInput('inputEmail')" [(ngModel)]="inputEmail" type="text" class="input">
+                    <h5 for="email">What's yout email?</h5>
+                    <input [(ngModel)]="currentData.email" #emailCtrl="ngModel" name="email" [class.red]="missingEmailData" class="input" id="email" [placeholder]="contactForm.submitted && emailCtrl.invalid? 'Hoppla! your email is required': 'youremail@email.com'"
+ required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                     
                 </div>
             </div>
             <div class="border_bottom">
-                <h5>How can I help you?</h5>
-                <input [class.red]="missingMessageData"  (click)="emptyInput('inputMessage')" [(ngModel)]="inputMessage" type="text" class="input">
+                <h5 for="message">How can I help you?</h5>
+                <textarea #message="ngModel" [(ngModel)]="currentData.message" #messageCtrl="ngModel" name="message" [class.red]="missingMessageData" type="text" id="message" [placeholder]="contactForm.submitted && contactForm.controls['message']?.invalid? 'What do you need to develop?': 'Hello Hannah, I am interested in...'" class="input" required></textarea>
             </div>
             <div style="display: flex; flex-direction: column; gap: 16px;">
             <div style="height: 52.2px;">
@@ -42,11 +43,11 @@
             <p class="privacy_alert" [class.privacy_alert_active]="!privacyAlert">Please accept the privacy policy.</p>
             </div>
             <div style="text-align: center;">
-            <button [disabled]="!isActive" (click)="sendInputData()">Drop a Line</button>
+            <button type="submit" value="Submit" [disabled]="!isActive">Drop a Line</button>
             </div>
             </div>
 
-        </div>
+        </form>
         <div class="footer">
             <p>© Hannah Luisa Anton 2026</p>
             <div>

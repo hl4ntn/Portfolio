@@ -70,7 +70,7 @@ p{
 }
 
 .right_part{
-    width: 800px;
+    min-width: 700px;
     display: flex;
     flex-direction: column;
     gap: 64px;
@@ -104,13 +104,15 @@ p{
     gap: 32px;
 }
 
-.input{
+.input, textarea{
     margin: 0;
-    color: #FFFFFFCC;
-    background-color:#1D1D1D;
+    color: #FFFFFFCC !important;
+    background-color:#1D1D1D !important;
     border: 0;
     line-height: 120%;
     font-size: 16px;
+    resize: none;
+    scrollbar-width: none;
     a{
         color: #FF834F;
         text-decoration: none;
@@ -122,7 +124,18 @@ p{
     }
 }
 
-input:focus {outline:none!important;}
+input:focus {outline:0!important;}
+
+
+input.input:-webkit-autofill,
+input.input:-internal-autofill-selected {
+  -webkit-box-shadow: 0 0 0px 1000px #1D1D1D inset !important;
+  -webkit-text-fill-color: rgba(255,255,255,0.8) !important;
+  transition: background-color 5000s ease-in-out, color 5000s ease-in-out;
+}
+
+
+textarea:focus {outline: none !important;}
 
 .border_bottom{
     border-bottom: 1px solid #F9AF42;
@@ -132,6 +145,7 @@ input:focus {outline:none!important;}
     padding: 16px;
     padding-right: 30px;
     height: 57px;
+    min-width: 280px;
     &:hover{
         border-bottom: 1px solid #FF834F;
         cursor: pointer;
@@ -220,9 +234,23 @@ input:focus {outline:none!important;}
     }
  }
 
- .red {
+ input::placeholder{
+    color: #FFFFFFCC,
+ }
+
+  input.red::placeholder{
     color: #EC7B7BCC !important;
  }
+
+  textarea::placeholder{
+    color: #FFFFFFCC,
+ }
+
+  textarea.red::placeholder{
+    color: #EC7B7BCC !important;
+ }
+
+
 
 .footer{
     position: absolute;
