@@ -2,11 +2,12 @@ import { AfterViewInit, Component } from '@angular/core';
 import { DotsComponent } from '../dots/dots.component';
 import { NavbarComponent1 } from '../navbar/navbar.component';
 import { PagesService } from '../pages.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [NavbarComponent1, DotsComponent],
+  imports: [NavbarComponent1, DotsComponent, CommonModule],
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss'
 })

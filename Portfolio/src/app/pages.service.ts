@@ -15,7 +15,7 @@ export class PagesService {
   ];
  currentPage = 0;
  direction: 'up' | 'down' = 'down';
- currentLanguage = 'de';
+ currentLanguage:string = 'de';
 
   constructor(private router: Router) { }
 

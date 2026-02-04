@@ -15,10 +15,11 @@
                 <div class="reference_box">
                      <img src="../../assets/imgs/icons/small_sun.png" alt="icon">
                     <h4>Tanja Schulz</h4>
-                    <p>Hier kommt der Text von einer zukünftigen Gruppenarbeit herein, da ich meine Gruppenpartner von JOIN nicht auf LinkedIn finde und daher dann die nächsten fragen werde. </p>
+                   <p *ngIf="pageService.currentLanguage === 'en'">I will add the references of my future team mates of the DABubble project here, because I cannot find my team partners from JOIN on linkedin. </p>
+                    <p *ngIf="pageService.currentLanguage === 'de'">Hier kommt der Text von einer zukünftigen Gruppenarbeit herein, da ich meine Gruppenpartner von JOIN nicht auf LinkedIn finde und daher dann die nächsten fragen werde. </p>
                     <p class="bold">Frontend Developer</p>
                 </div>
-                <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank"><p>zum LinkedIn profile >></p></a>
+                <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank"><p>{{ pageService.currentLanguage === 'en' ? "view LinkedIn profile" : 'zum LinkedIn profile' }} >></p></a>
             </div>
             </div>
 
@@ -29,10 +30,11 @@
                 <div class="reference_box">
                     <img src="../../assets/imgs/icons/small_sun.png" alt="icon">
                     <h4>Tanja Schulz</h4>
-                    <p>Hier kommt der Text von einer zukünftigen Gruppenarbeit herein, da ich meine Gruppenpartner von JOIN nicht auf LinkedIn finde und daher dann die nächsten fragen werde. </p>
+                    <p *ngIf="pageService.currentLanguage === 'en'">I will add the references of my future team mates of the DABubble project here, because I cannot find my team partners from JOIN on linkedin. </p>
+                    <p *ngIf="pageService.currentLanguage === 'de'">Hier kommt der Text von einer zukünftigen Gruppenarbeit herein, da ich meine Gruppenpartner von JOIN nicht auf LinkedIn finde und daher dann die nächsten fragen werde. </p>
                     <p class="bold">Frontend Developer</p>
                 </div>
-                <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank"><p>zum LinkedIn profile >></p></a>
+                <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank"><p>{{ pageService.currentLanguage === 'en' ? "view LinkedIn profile" : 'zum LinkedIn profile' }} >></p></a>
             </div>
             </div>
 
@@ -44,10 +46,11 @@
                 <div class="reference_box">
                     <img src="../../assets/imgs/icons/small_sun.png" alt="icon">
                     <h4>Tanja Schulz</h4>
-                    <p>Hier kommt der Text von einer zukünftigen Gruppenarbeit herein, da ich meine Gruppenpartner von JOIN nicht auf LinkedIn finde und daher dann die nächsten fragen werde. </p>
+                    <p *ngIf="pageService.currentLanguage === 'en'">I will add the references of my future team mates of the DABubble project here, because I cannot find my team partners from JOIN on linkedin. </p>
+                    <p *ngIf="pageService.currentLanguage === 'de'">Hier kommt der Text von einer zukünftigen Gruppenarbeit herein, da ich meine Gruppenpartner von JOIN nicht auf LinkedIn finde und daher dann die nächsten fragen werde. </p>
                     <p class="bold">Frontend Developer</p>
                 </div>
-                <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank"><p>zum LinkedIn profile >></p></a>
+                <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank"><p>{{ pageService.currentLanguage === 'en' ? "view LinkedIn profile" : 'zum LinkedIn profile' }} >></p></a>
             </div>
             </div>
 

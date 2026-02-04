@@ -3,8 +3,9 @@
     <div class="main">
         <div class="content">
             <div class="heading">
-                <h3>My work</h3>
-                <p>Explore a selection of my work here - Interact with the projects to see my skills in action.</p>
+                <h3>{{ pageService.currentLanguage === 'en' ? "My work" : 'Meine Projekte' }}</h3>
+                <p *ngIf="pageService.currentLanguage === 'en'">Explore a selection of my work here - Interact with the projects to see my skills in action.</p>
+                <p *ngIf="pageService.currentLanguage === 'de'">Entdecke hier eine Auswahl meiner bisherigen Projekte, indem du mit den Slides interagierst.</p>
             </div>
             <div class="projects">
 
@@ -21,13 +22,15 @@
                             <div>
 
                                 
-                                    <p>{{projects[currentProject].participation}}</p>
+                                    <p *ngIf="pageService.currentLanguage === 'en'" >{{projects[currentProject].participationEN}}</p>
+                                    <p *ngIf="pageService.currentLanguage === 'de'" >{{projects[currentProject].participationDE}}</p>
                                 
                             </div>
                         </div>
                             <h4>{{projects[currentProject].title}}</h4>
                             <p class="skills">{{projects[currentProject].skills}}</p>
-                            <p class="explanation_text">{{projects[currentProject].description}}</p>
+                            <p *ngIf="pageService.currentLanguage === 'en'" class="explanation_text">{{projects[currentProject].descriptionEN}}</p>
+                            <p *ngIf="pageService.currentLanguage === 'de'" class="explanation_text">{{projects[currentProject].descriptionDE}}</p>
                             <div>
                                 <a [href]="projects[currentProject].github" target="_blank">GitHub <img class="rotate"
                                         src="../../assets/imgs/icons/arrow_right.png" alt="arrow right"></a>
@@ -36,8 +39,8 @@
                             </div>
                         </div>
                         <div class="butttons_div">
-                            <pre (click)="previousProject()"><< Previous project</pre>
-                            <pre (click)="nextProject()">Next project >></pre>
+                            <pre (click)="previousProject()"><< {{ pageService.currentLanguage === 'en' ? "Previous project" : 'Vorheriges Projekt' }}</pre>
+                            <pre (click)="nextProject()">{{ pageService.currentLanguage === 'en' ? "Next project" : 'Nächstes Projekt' }}>></pre>
                         </div>
                     </div>
 
