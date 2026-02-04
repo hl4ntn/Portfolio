@@ -47,7 +47,7 @@ export class MyWorkComponent  implements AfterViewInit {
       bgcolor: '#FF834F',
       suncolor: 'yellow_sun',
       skills: 'JavaScript|HTML|CSS',
-      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale. ',
+      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and bottles to fight against the killer chicken. ',
       participation: 'I independently developed and implemented the El Pollo Loco game from start to finish.',
       github: 'https://github.com/hl4ntn/elPolloLoco',
       link: 'https://flynn-anton.developerakademie.net/ElPolloLoco/index.html',

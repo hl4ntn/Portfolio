@@ -94,30 +94,16 @@
 }
 
 .topright{
-        top: 26%;
-    right: 4%;
-    height: 55%;
-        z-index: 1;
-}
-
-.middleleft{
-    height: 60%;
-    filter: brightness(0) saturate(100%)
-          invert(96%)
-          sepia(8%)
-          saturate(180%)
-          hue-rotate(2deg)
-          brightness(103%)
-          contrast(97%);
-    bottom: 0;
-    right: 40%;
-    z-index: 0;
+    top: 10%;
+    right: 0;
+    height: 65%;
+    z-index: 1;
 }
 
 .bottomright{
     bottom: 0;
-    right: 0;
-    height: 120%;
+    right: 120px;
+    height: 96%;
     z-index: 2;
 }
 
