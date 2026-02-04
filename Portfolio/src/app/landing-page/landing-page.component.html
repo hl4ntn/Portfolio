@@ -5,12 +5,12 @@
    <div class="left_screen">
         <div>
             <div class="heading">
-              <h2>Hello there! I'm</h2>
+              <h2>{{ pageService.currentLanguage === 'en' ? "Hello there! I'm" : 'Hallo! Ich bin' }}</h2>
                 <h1>Hannah Luisa Anton</h1>
                 <h2 class="margin20">Frontend Developer</h2>  
             </div>
             
-            <a [href]="'#5'">Get in Touch</a>
+            <a [href]="'#5'">{{ pageService.currentLanguage === 'en' ? "Get in Touch" : 'Nimm Kontakt auf' }}</a>
         </div>
         <div class="scroll_icon">
             <img class="scroll_icon" src="./../../assets/imgs/icons/ScollDown.png">

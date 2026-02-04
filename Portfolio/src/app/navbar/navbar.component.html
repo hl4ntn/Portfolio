@@ -11,7 +11,7 @@
         <p class="white">H.L.A.</p>
     </div>
     <div class="menu-options">
-        <button class="btn_white">EN</button>
+        <button class="btn_white" (click)="toggleLanguage()"> {{ pageService.currentLanguage === 'en' ? 'DE' : 'EN' }}</button>
         <div class="burger_menu_white"></div>
     </div>
 </section>
@@ -22,7 +22,7 @@
         <p class="white">H.L.A.</p>
     </div></a>
     <div class="menu-options">
-        <button class="btn_white">EN</button>
+        <button class="btn_white" (click)="toggleLanguage()">{{ pageService.currentLanguage === 'en' ? 'DE' : 'EN' }}</button>
         <div class="burger_menu_white"></div>
     </div>
 </section>
@@ -34,7 +34,7 @@
         <p class="black">H.L.A.</p>
     </div></a>
     <div class="menu-options">
-        <button class="btn_black">EN</button>
+        <button class="btn_black" (click)="toggleLanguage()">{{ pageService.currentLanguage === 'en' ? 'DE' : 'EN' }}</button>
         <div class="burger_menu_black"></div>
     </div></section>
             }

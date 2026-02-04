@@ -3,9 +3,10 @@
 <div class="main">
     <div class="competencies">
         <div class="top_part">
-            <h3 class="white">Core Competencies</h3>
+            <h3 class="white">{{ pageService.currentLanguage === 'en' ? "Core Competencies" : 'Kernkompetenzen' }}</h3>
             <div class="text_box">
-            <p>I have used a variety of front-end technologies in my projects. I have strengthened my skills in building static and dynamic websites, responsive layouts, and data visualization interfaces, always ensuring smooth user experiences.</p>
+            <p *ngIf="pageService.currentLanguage === 'en'">I have used a variety of front-end technologies in my projects. I have strengthened my skills in building static and dynamic websites, responsive layouts, and data visualization interfaces, always ensuring smooth user experiences.</p>
+            <p *ngIf="pageService.currentLanguage === 'de'">In meinen Projekten habe ich mit verschiedenen Frontend-Technologien gearbeitet und meine Fähigkeiten im Aufbau statischer und dynamischer Websites, responsiver Layouts und Datenvisualisierungen weiterentwickelt. Eine gute Nutzererfahrung war dabei stets im Fokus.</p>
         </div>
 
         </div>
@@ -14,10 +15,11 @@
                 <img class="turning_sun" src="../../assets/imgs/icons/sun_icon_orange.png" alt="sun icon">
                 <img class="heat_icon" src="../../assets/imgs/icons/heat_emoji.png" alt="heat icon">
                 <div class="hover-div">
-                    <h4>Don't see the skill you are looking for?</h4>
+                    <h4>{{ pageService.currentLanguage === 'en' ? "Don't see the skill you are looking for?" : 'Findest du nicht, wonach du suchst?' }}</h4>
                     <div class="overlay_content">
                    
-                        <p>Feel free to contact me. I look forward to expanding on my previous knowledge. Also I have a special interest in learning:</p>
+                        <p *ngIf="pageService.currentLanguage === 'en'">Feel free to contact me. I look forward to expanding on my previous knowledge. Also I have a special interest in learning:</p>
+                         <p *ngIf="pageService.currentLanguage === 'de'">Melde dich gerne bei mir. Ich bin motiviert, mein Wissen weiter auszubauen, und habe besonderes Interesse an:</p>
                    
                     <div>
                         <div>

@@ -2,11 +2,12 @@ import { AfterViewInit, Component } from '@angular/core';
 import { DotsComponent } from '../dots/dots.component';
 import { NavbarComponent1 } from '../navbar/navbar.component';
 import { PagesService } from '../pages.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-core-competencies',
   standalone: true,
-  imports: [NavbarComponent1, DotsComponent],
+  imports: [NavbarComponent1, DotsComponent, CommonModule],
   templateUrl: './core-competencies.component.html',
   styleUrl: './core-competencies.component.scss'
 })

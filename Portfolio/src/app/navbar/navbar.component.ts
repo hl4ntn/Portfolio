@@ -11,4 +11,12 @@ import { PagesService } from '../pages.service';
 })
 export class NavbarComponent1 {
     constructor(public pageService: PagesService) {}
+
+    toggleLanguage(){
+      if(this.pageService.currentLanguage == "en"){
+        this.pageService.currentLanguage = "de"
+      } else{
+        this.pageService.currentLanguage = "en"
+      }
+    }
 }

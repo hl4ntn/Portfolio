@@ -8,40 +8,52 @@
             <img src="../../assets/imgs/photo2.png" alt="photo">
         </div>
         <div class="right_part">
-            <h3>About me</h3>
+            <h3>{{ pageService.currentLanguage === 'en' ? "About me" : 'Über mich' }}</h3>
             
         </div>
         
         
         <div class="text_box">
-            <p>Hey there, I’m Hannah. I’m passionate about bringing customers’ ideas to life from the start to the end of a project and accompanying them throughout the entire process. I thrive on solving problems and finding solutions that make life easier for myself and others. Error messages inspire me to dig deeper and understand the logic behind them.
-            <br> <br> 
-            Let's connect and create something together!</p>
+              <p *ngIf="pageService.currentLanguage === 'en'">
+    Hey there, I’m Hannah. I’m passionate about bringing customers’ ideas to life
+    from the start to the end of a project and accompanying them throughout the
+    entire process. I thrive on solving problems and finding solutions that make
+    life easier for myself and others. Error messages inspire me to dig deeper and
+    understand the logic behind them.
+    <br><br>
+    Let's connect and create something together!
+  </p>
+
+  <p *ngIf="pageService.currentLanguage === 'de'">
+    Hey, ich bin Hannah. Die Projekte meiner Kund*innen von Anfang bis Ende zu gestalten zu können und sie während des gesamten Prozesses zu begleiten begeistert mich. Probleme lösen und Lösungen finden, die anderen sowie mir sebst das Leben erleichtern: das ist was mich täglich antreibt. Fehlermeldungen motivieren mich, tiefer in die Logik einzutauchen.
+    <br><br>
+    Lass uns vernetzen und gemeinsam etwas Tolles erschaffen!
+  </p>
             <div>
-                <a [href]="'#5'">Let's Talk</a>
+                <a [href]="'#5'">{{ pageService.currentLanguage === 'en' ? "Let's Talk" : 'Nimm Kontakt auf' }}</a>
                 <img src="../../assets/imgs/icons/emoji1.png" alt="emoji">
                 <div class="hover-div">
-                    <h4>More about me</h4>
+                    <h4>{{ pageService.currentLanguage === 'en' ? "More about me" : 'Mehr über mich' }}</h4>
                     <div class="skills">
                     <div>
                         <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>Organised</p>
+                        <p>{{ pageService.currentLanguage === 'en' ? "Organised" : 'Organisiert' }}</p>
                     </div>
                     <div>
                         <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>Continously learning</p>
+                        <p>{{ pageService.currentLanguage === 'en' ? "Continously learning" : 'Lernbereit' }}</p>
                     </div>
                     <div>
                         <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>Analytical Thinker</p>
+                        <p>{{ pageService.currentLanguage === 'en' ? "Analytical Thinker" : 'Analytisch' }}</p>
                     </div>
                     <div>
                         <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>Based in Hannover</p>
+                        <p>{{ pageService.currentLanguage === 'en' ? "Based in Hannover" : 'Wohnhaft in Hannover' }}</p>
                     </div>
                     <div>
                         <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>Open to work remote</p>
+                        <p>{{ pageService.currentLanguage === 'en' ? "Open to work remote" : 'Offen für Remote-Arbeit' }}</p>
                     </div>
                     </div>
                 </div>
