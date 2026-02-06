@@ -5,13 +5,14 @@ import { PagesService } from '../pages.service';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 
 
 @Component({
   selector: 'app-call-to-action',
   standalone: true,
-  imports: [NavbarComponent1, DotsComponent, FormsModule, RouterLink],
+  imports: [NavbarComponent1, DotsComponent, FormsModule, RouterLink, CommonModule],
   templateUrl: './call-to-action.component.html',
   styleUrl: './call-to-action.component.scss'
 })

@@ -113,6 +113,7 @@ p{
     font-size: 16px;
     resize: none;
     scrollbar-width: none;
+    height: 22px;
     a{
         color: #FF834F;
         text-decoration: none;
@@ -122,6 +123,10 @@ p{
         font-weight: 700;
     }
     }
+}
+
+.width_310{
+    width: 310px;
 }
 
 input:focus {outline:0!important;}
@@ -144,11 +149,17 @@ textarea:focus {outline: none !important;}
     gap: 10px;
     padding: 16px;
     padding-right: 30px;
-    height: 57px;
-    min-width: 280px;
+    min-height: 57px;
+    // min-width: 280px;
+        justify-content: space-between;
     &:hover{
         border-bottom: 1px solid #FF834F;
         cursor: pointer;
+    }
+    >div{
+        height: calc(100% - 22px);
+        display: flex;
+        align-items: center;
     }
  }
 
@@ -173,7 +184,7 @@ textarea:focus {outline: none !important;}
     font-weight: 700;
     font-size: 18px;
     line-height: 120%;
-    width: 148px;
+    padding: 0 20px;
     height: 40px;
  }
 

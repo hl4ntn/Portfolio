@@ -8,43 +8,51 @@
         <a [href]="'#0'"><div class="arrow_div"><div class="arrow_up"></div></div></a>
     
         <div class="left_part" style="min-width: 528px;">
-            <h3>Lets build something Cool together!</h3>
+            <h3> {{ pageService.currentLanguage === 'en' ? "Lets build something Cool together!" : 'Lass uns etwas gemeinsam gestalten!' }}</h3>
             <div>
-                <h4>Got a problem to solve?</h4>
-                <p>
+                <h4> {{ pageService.currentLanguage === 'en' ? "Got a problem to solve?" : 'Suchst du nach einer Lösung für dein Software Problem?' }}</h4>
+                <p *ngIf="pageService.currentLanguage === 'en'">
                     I’m interested in front-end and web development, creating intuitive, responsive, and user-centered solutions. If you think I could add value to your project, feel free to get in touch — I’d love to hear from you. </p>
+                 <p *ngIf="pageService.currentLanguage === 'de'">
+                    Ich interessiere mich für Frontend- und Webprojekte und gestalte intuitive, responsive und nutzerzentrierte Lösungen. Wenn du denkst, dass ich einen Mehrwert für dein Projekt bieten kann, melde dich gerne bei mir – ich freue mich darauf, von dir zu hören. </p>
+
             </div>
 
         </div>
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="right_part">
             <div class="personal_data" >
                 <div class="border_bottom short">
-                    <h5 for="name">What's yout name?</h5>
-                    <input [(ngModel)]="currentData.name" name="name" [class.red]="missingNameData" id="name" [placeholder]="contactForm.submitted && contactForm.controls['name']?.invalid? 'Oops! it seems your name is missing': 'Your name goes here'" type="text" class="input" required>
+                    <div><h5 for="name">{{ pageService.currentLanguage === 'en' ? "What's yout name?" : 'Wie heißt du?' }}</h5></div>
+                    <input *ngIf="pageService.currentLanguage === 'en'"  [(ngModel)]="currentData.name" name="name" [class.red]="missingNameData" id="name" [placeholder]="contactForm.submitted && contactForm.controls['name']?.invalid? 'Oops! it seems your name is missing': 'Your name goes here'" type="text" class="input width_310" required>
+                    <input *ngIf="pageService.currentLanguage === 'de'" [(ngModel)]="currentData.name" name="name" [class.red]="missingNameData" id="name" [placeholder]="contactForm.submitted && contactForm.controls['name']?.invalid? 'Sieht so aus, als würde dein Name fehlen': 'Füge hier deinen Namen ein'" type="text" class="input width_310" required>
                    
                 </div>
                 <div class="border_bottom short">
-                    <h5 for="email">What's yout email?</h5>
-                    <input [(ngModel)]="currentData.email" #emailCtrl="ngModel" name="email" [class.red]="missingEmailData" class="input" id="email" [placeholder]="contactForm.submitted && emailCtrl.invalid? 'Hoppla! your email is required': 'youremail@email.com'"
- required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                    
+                    <div><h5 for="email">{{ pageService.currentLanguage === 'en' ? "What's yout email?" : 'Wie lautet deine E-Mail-Adresse?' }}</h5></div>
+                    <input *ngIf="pageService.currentLanguage === 'en'" [(ngModel)]="currentData.email" #emailCtrl="ngModel" name="email" [class.red]="missingEmailData" class="input" id="email" [placeholder]="contactForm.submitted && emailCtrl.invalid? 'Hoppla! your email is required': 'youremail@email.com'"
+                    required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    <input *ngIf="pageService.currentLanguage === 'de'" [(ngModel)]="currentData.email" #emailCtrl="ngModel" name="email" [class.red]="missingEmailData" class="input width_310" id="email" [placeholder]="contactForm.submitted && emailCtrl.invalid? 'Ich brauche noch deine E-Mail-Adresse': 'deine-email@email.com'"
+                    required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                                        
                 </div>
             </div>
             <div class="border_bottom">
-                <h5 for="message">How can I help you?</h5>
-                <textarea #message="ngModel" [(ngModel)]="currentData.message" #messageCtrl="ngModel" name="message" [class.red]="missingMessageData" type="text" id="message" [placeholder]="contactForm.submitted && contactForm.controls['message']?.invalid? 'What do you need to develop?': 'Hello Hannah, I am interested in...'" class="input" required></textarea>
+                <h5 for="message">{{ pageService.currentLanguage === 'en' ? "How can I help you?" : 'Was kann ich für dich tun?' }}</h5>
+                <textarea *ngIf="pageService.currentLanguage === 'en'" #message="ngModel" [(ngModel)]="currentData.message" #messageCtrl="ngModel" name="message" [class.red]="missingMessageData" type="text" id="message" [placeholder]="contactForm.submitted && contactForm.controls['message']?.invalid? 'What do you need to develop?': 'Hello Hannah, I am interested in...'" class="input" required></textarea>
+                <textarea *ngIf="pageService.currentLanguage === 'de'" #message="ngModel" [(ngModel)]="currentData.message" #messageCtrl="ngModel" name="message" [class.red]="missingMessageData" type="text" id="message" [placeholder]="contactForm.submitted && contactForm.controls['message']?.invalid? 'Was möchtes du entwickeln?': 'Hallo Hannah, ich interessiere mich für...'" class="input" required></textarea>
             </div>
             <div style="display: flex; flex-direction: column; gap: 16px;">
             <div style="height: 52.2px;">
             <div class="privacy_box">
                 <div class="checkmark" [class.active]="isActive" [class.inactive]="!isActive" (click)="toggle()">
                 </div>
-                <p class="input">I've read the <a routerLink="/privacypolicy">privacy policy</a> and agree to the processing of my data.</p>
+                <p *ngIf="pageService.currentLanguage === 'en'" class="input">I've read the <a routerLink="/privacypolicy">privacy policy</a> and agree to the processing of my data.</p>
+                <p *ngIf="pageService.currentLanguage === 'de'" class="input">Ich stimme der Verarbeitung meiner Daten gemäß der <a routerLink="/privacypolicy">Datenschutzerklärung</a> zu.</p>
             </div>
-            <p class="privacy_alert" [class.privacy_alert_active]="!privacyAlert">Please accept the privacy policy.</p>
+            <p class="privacy_alert" [class.privacy_alert_active]="!privacyAlert">{{ pageService.currentLanguage === 'en' ? "Please accept the privacy policy." : 'Bitte stimme der Datenschutzerklärung zu.' }}</p>
             </div>
             <div style="text-align: center;">
-            <button type="submit" value="Submit" [disabled]="!isActive">Drop a Line</button>
+            <button type="submit" value="Submit" [disabled]="!isActive">{{ pageService.currentLanguage === 'en' ? "Drop a Line" : 'Nachricht senden' }}</button>
             </div>
             </div>
 
@@ -52,7 +60,7 @@
         <div class="footer">
             <p>© Hannah Luisa Anton 2026</p>
             <div>
-            <a routerLink="/imprint">Impressum</a>
+            <a routerLink="/imprint">{{ pageService.currentLanguage === 'en' ? "Imprint" : 'Impressum' }}</a>
             <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank">LinkedIn</a>
             <a href="https://github.com/hl4ntn" target="_blank">GitHub</a>
         </div>
