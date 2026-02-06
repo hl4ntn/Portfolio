@@ -92,11 +92,41 @@ section{
         height: 32px; 
         background-image: url(./../../assets/imgs/icons/menu_white.png);
     }
-    .burger_menu_white:hover{
+    .burger_menu_white:hover + .hover-div{
         cursor: pointer; 
         background-image: url(./../../assets/imgs/icons/menu_orange.png);
+        opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
     }
     
+}
+
+.hover-div{
+  background-color: #F8F7E5;
+  position: absolute;
+  width: 208px;
+  min-height: 222px;
+  top: 10px;
+  right: 64px;
+  border-radius: 4px;
+  border: 1px solid #1D1D1D;
+  padding: 32px;
+  color: #1D1D1D;
+  font-size: 18px;
+  line-height: 120%;
+  font-weight: 700;
+  font-family: 'Quicksand';
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+//   opacity: 0;
+  visibility: visible;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+
+  
 }
 
 button{

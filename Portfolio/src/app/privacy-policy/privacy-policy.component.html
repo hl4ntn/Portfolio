@@ -6,8 +6,8 @@
         <a routerLink="" class="white">H.L.A.</a>
     </div></a>
     <div class="menu-options">
-        <button class="btn_white">EN</button>
-        <div class="burger_menu_white"></div>
+        <button class="btn_white" (click)="toggleLanguage()"> {{ pageService.currentLanguage === 'en' ? 'DE' : 'EN' }}</button>
+        <div class="burger_menu_white" (click)="goBack()"></div>
     </div>
 </section>
 
@@ -16,13 +16,129 @@
     
     <img class="orange_sun" src="../../assets/imgs/icons/sun_icon_orange_180.png" alt="turning sun icon orange">
     <img class="blue_sun" src="../../assets/imgs/icons/sun_blue.png" alt="turning sun icon blue">
+    <h3 style="color:#F8F7E5;">{{ pageService.currentLanguage === 'en' ? "Privacy policy" : 'Datenschutzerklärung' }} </h3>
+    <div class="text_content">
+        <div class="text-section">
+            <p *ngIf="pageService.currentLanguage === 'en'">
+I appreciate your interest in <a class="yellow">Portfolio</a> (product). The protection of your personal data is important to me. Below, I will inform you about which data I collect and how I handle it.
+            </p>
+
+            <p *ngIf="pageService.currentLanguage === 'de'">
+Ich freue mich über Ihr Interesse an <a class="yellow">Portfolio</a> (Product). Der Schutz Ihrer personenbezogenen Daten ist mir wichtig. Nachfolgend informiere ich Sie, welche Daten ich erhebe und wie ich damit umgehe.
+            </p>
+        </div>
+        <div class="first_text_section">
+            <h4>{{ pageService.currentLanguage === 'en' ? "Responsible party" : 'Verantwortlicher' }}</h4>
+            <p>
+                Hannah Luisa Anton <br>
+                Niemeyerstr. 10 <br>
+                30449 Hannover<br>
+                {{ pageService.currentLanguage === 'en' ? "Germany" : 'Deutschland' }}<br>
+                Email: hannah.anton&#64;gmx.de
+            </p>
+        </div>
+        <div class="text-section">
+            <h5>{{ pageService.currentLanguage === 'en' ? "Collection and Processing of Personal Data" : 'Erhebung und Verarbeitung personenbezogener Daten' }}</h5>
+            <p *ngIf="pageService.currentLanguage === 'en'">
+When you send me messages via my contact form, I collect the following data:<br><br>
+
+-> Name<br>
+
+-> Email address<br>
+
+-> Message content<br><br>
+
+This data is used exclusively to process your inquiry. No further use of the data takes place.
+            </p>
+
+            <p *ngIf="pageService.currentLanguage === 'de'">
+Wenn Sie mir über mein Kontaktformular Nachrichten senden, erhebe ich folgende Daten:<br><br>
+
+-> Name<br>
+
+-> E-Mail-Adresse<br>
+
+-> Nachrichtentext<br><br>
+
+Diese Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet. Eine darüber hinausgehende Nutzung findet nicht statt.
+            </p>
+        </div>
+        <div class="text-section">
+            <h5>{{ pageService.currentLanguage === 'en' ? "Legal Basis for Processing" : 'Rechtsgrundlage der Verarbeitung' }}</h5>
+            <p *ngIf="pageService.currentLanguage === 'en'">
+The processing of your data is based on your consent in accordance with Article 6(1)(a) of the GDPR.
+            </p>
+            <p *ngIf="pageService.currentLanguage === 'de'">
+Die Verarbeitung Ihrer Daten erfolgt auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
+            </p>
+        </div>
+        <div class="text-section">
+            <h5>{{ pageService.currentLanguage === 'en' ? "Storage and Deletion" : 'Speicherung und Löschung' }}</h5>
+            <p *ngIf="pageService.currentLanguage === 'en'">
+Your data will only be stored for as long as necessary to process your inquiry. After your request has been handled, the data will be deleted, provided that no legal retention obligations exist.
+            </p>
+            <p *ngIf="pageService.currentLanguage === 'de'">
+                Ihre Daten werden nur so lange gespeichert, wie es für die Bearbeitung Ihrer Anfrage erforderlich ist. Nach Abschluss der Bearbeitung werden die Daten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.
+            </p>
+        </div>
+        <div class="text-section">
+            <h5>{{ pageService.currentLanguage === 'en' ? "Sharing with Third Parties" : 'Weitergabe an Dritte' }}</h5>
+            <p *ngIf="pageService.currentLanguage === 'en'">
+            Your data will not be shared with any third parties.
+            </p>
+            <p *ngIf="pageService.currentLanguage === 'de'">
+                Eine Weitergabe Ihrer Daten an Dritte erfolgt nicht.
+            </p>
+        </div>
+        <div class="text-section">
+            <h5>{{ pageService.currentLanguage === 'en' ? "Your Rights" : 'Ihre Rechte' }}</h5>
+            <p *ngIf="pageService.currentLanguage === 'en'">
+You have the right to:<br><br>
+
+-> Request information about the personal data I have stored about you,<br>
+
+-> Request the correction of inaccurate data,<br>
+
+-> Request the deletion of your data, provided that there are no legal retention obligations,<br>
+
+-> Request the restriction of processing,<br>
+
+-> Withdraw your consent at any time, without affecting the lawfulness of the processing carried out based on your consent before its withdrawal.<br>
+            </p>
+            <p *ngIf="pageService.currentLanguage === 'de'">
+Sie haben das Recht:<br><br>
+
+-> Auskunft über die bei mir gespeicherten personenbezogenen Daten zu erhalten,<br>
+
+-> die Berichtigung unrichtiger Daten zu verlangen,<br>
+
+-> die Löschung Ihrer Daten zu verlangen, soweit keine gesetzlichen Aufbewahrungspflichten bestehen,<br>
+
+-> die Verarbeitung einzuschränken,<br>
+
+-> Ihre Einwilligung jederzeit zu widerrufen, ohne dass die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung berührt wird.<br>
+            </p>
+        </div>
+        <div class="text-section">
+            <h5>{{ pageService.currentLanguage === 'en' ? "Contact for data protection inquiries" : 'Kontakt für Datenschutzfragen' }}</h5>
+            <p *ngIf="pageService.currentLanguage === 'en'">
+If you have any questions regarding the collection, processing, or use of your personal data, please contact:<br>
+Hannah Luisa Anton - hannah.anton&#64;gmx.de
+            </p>
+            <p *ngIf="pageService.currentLanguage === 'de'">
+Bei Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten wenden Sie sich bitte an:<br>
+Hannah Luisa Anton - hannah.anton&#64;gmx.de
+            </p>
+        </div>
+
+    </div>
     
     </div>
 
      <div class="footer">
             <p>© Hannah Luisa Anton 2026</p>
             <div>
-            <a routerLink="">Zurück</a>
+            <a routerLink="/imprint" (click)="switchCurrentPage()">{{ pageService.currentLanguage === 'en' ? "Imprint" : 'Impressum' }}</a>
             <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank">LinkedIn</a>
             <a href="https://github.com/hl4ntn" target="_blank">GitHub</a>
         </div>

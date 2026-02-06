@@ -64,12 +64,24 @@ section{
     align-items: center;
     .burger_menu_white{
         width: 32px;
-        height: 32px; 
-        background-image: url(./../../assets/imgs/icons/menu_white.png);
+        height: 35px; 
+        background-image: url(./../../assets/imgs/icons/arrow_down.png);
+        rotate: 90deg;
+        background-size: contain;
+        
     }
     .burger_menu_white:hover{
         cursor: pointer; 
-        background-image: url(./../../assets/imgs/icons/menu_orange.png);
+        background-image: url(./../../assets/imgs/icons/arrow_down.png);
+        filter: 
+  brightness(0) 
+  saturate(100%) 
+  invert(63%) 
+  sepia(63%) 
+  saturate(601%) 
+  hue-rotate(330deg) 
+  brightness(101%) 
+  contrast(101%);
     }
     
 }
@@ -98,6 +110,54 @@ button:hover{
     border: 1px solid #F8F7E5;
     color: #F8F7E5;
 }
+
+.text_content{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 50vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(248 247 229 / 11%) rgb(29, 29, 29);
+}
+.first_text_section{
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.text_section{
+    
+}
+
+h4{
+    margin: 0;
+    color: #F9AF42;
+    font-size: 24px;
+    line-height: 120%;
+}
+
+h5{
+    color: #F9AF42;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 120%;
+    margin: 0;
+}
+
+p{
+    color: #F8F5EC;
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    margin: 0;
+}
+
+.yellow{
+    color: #F9AF42;
+}
+
 .orange_sun{
     width: 180px;
     height: 180px;

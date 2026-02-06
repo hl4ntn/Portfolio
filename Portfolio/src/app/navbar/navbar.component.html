@@ -13,6 +13,31 @@
     <div class="menu-options">
         <button class="btn_white" (click)="toggleLanguage()"> {{ pageService.currentLanguage === 'en' ? 'DE' : 'EN' }}</button>
         <div class="burger_menu_white"></div>
+        <div class="hover-div">
+                    <h4>{{ pageService.currentLanguage === 'en' ? "More about me" : 'Mehr über mich' }}</h4>
+                    <div class="skills">
+                    <div>
+                        <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                        <p>{{ pageService.currentLanguage === 'en' ? "Organised" : 'Organisiert' }}</p>
+                    </div>
+                    <div>
+                        <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                        <p>{{ pageService.currentLanguage === 'en' ? "Continously learning" : 'Lernbereit' }}</p>
+                    </div>
+                    <div>
+                        <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                        <p>{{ pageService.currentLanguage === 'en' ? "Analytical Thinker" : 'Analytisch' }}</p>
+                    </div>
+                    <div>
+                        <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                        <p>{{ pageService.currentLanguage === 'en' ? "Based in Hannover" : 'Wohnhaft in Hannover' }}</p>
+                    </div>
+                    <div>
+                        <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                        <p>{{ pageService.currentLanguage === 'en' ? "Open to work remote" : 'Offen für Remote-Arbeit' }}</p>
+                    </div>
+                    </div>
+                </div>
     </div>
 </section>
             } @else if(pageService.currentPage % 2 === 0 || pageService.currentPage > 4){

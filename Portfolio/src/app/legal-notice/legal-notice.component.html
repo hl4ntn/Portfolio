@@ -6,8 +6,8 @@
         <a routerLink="" class="white">H.L.A.</a>
     </div></a>
     <div class="menu-options">
-        <button class="btn_white">EN</button>
-        <div class="burger_menu_white"></div>
+        <button class="btn_white" (click)="toggleLanguage()"> {{ pageService.currentLanguage === 'en' ? 'DE' : 'EN' }}</button>
+        <div class="burger_menu_white" (click)="goBack()"></div>
     </div>
 </section>
 
@@ -20,51 +20,83 @@
     <h3 style="color:#F8F7E5;">{{ pageService.currentLanguage === 'en' ? "Legal notice" : 'Rechtliche Hinweise' }} </h3>
     <div class="text_content">
         <div class="first_text_section">
-            <h4>Imprint</h4>
+            <h4>{{ pageService.currentLanguage === 'en' ? "Imprint" : 'Impressum' }}</h4>
             <p>
                 Hannah Luisa Anton <br>
                 Niemeyerstr. 10 <br>
-                30449 Hannover
+                30449 Hannover<br>
+                {{ pageService.currentLanguage === 'en' ? "Germany" : 'Deutschland' }}
             </p>
             <div>
-            <h5>Exploring the Board</h5>
+            <h5>{{ pageService.currentLanguage === 'en' ? "Exploring the Board" : 'Kontakt' }}</h5>
             <p>Email: hannah.anton&#64;gmx.de</p>
         </div>
         </div>
         <div class="text-section">
-            <h5>Acceptance of terms</h5>
-            <p>
-By accessing and using <a class="yellow">Portfolio</a> (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.
+            <h5>{{ pageService.currentLanguage === 'en' ? "Acceptance of terms" : 'Akzeptanz der Nutzungsbedingungen' }}</h5>
+            <p *ngIf="pageService.currentLanguage === 'en'">
+By accessing and using <a class="yellow">Portfolio</a> (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. I, Hannah Luisa Anton, may update or change the terms and conditions from time to time without notice.
+            </p>
+
+            <p *ngIf="pageService.currentLanguage === 'de'">
+Durch den Zugriff auf und die Nutzung von <a class="yellow">Portfolio</a> (Produkt) erkennen Sie die folgenden Allgemeinen Geschäftsbedingungen sowie alle Richtlinien, Leitfäden oder Änderungen an, die Ihnen von Zeit zu Zeit vorgelegt werden können, und erklären sich damit einverstanden.
+Ich behalte mir das Recht vor, diese Bedingungen jederzeit und ohne vorherige Ankündigung zu aktualisieren oder zu ändern.
             </p>
         </div>
         <div class="text-section">
-            <h5>Scope and ownership of the product</h5>
-            <p>
-Portfolio has been developed as part of a student group project in a web development bootcamp at the Developer Akademie GmbH. It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product. <br><br>The design of Portfolio is owned by the Developer Akademie GmbH. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.
+            <h5>{{ pageService.currentLanguage === 'en' ? "Scope and ownership of the product" : 'Geltungsbereich und Eigentum am Produkt' }}</h5>
+            <p *ngIf="pageService.currentLanguage === 'en'">
+<a class="yellow">Portfolio</a> has been developed as part of a project in a web development bootcamp at the <a class="yellow">Developer Akademie GmbH</a>. It has an educational purpose and is not intended for extensive personal & business usage. As such, I cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product. <br><br>The design of <a class="yellow">Portfolio</a> is owned by the <a class="yellow">Developer Akademie GmbH</a>. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.
+            </p>
+            <p *ngIf="pageService.currentLanguage === 'de'">
+<a class="yellow">Portfolio</a> wurde im Rahmen eines Projekts in einem Webentwicklungs-Bootcamp an der <a class="yellow">Developer Akademie GmbH</a> entwickelt. Es dient ausschließlich zu Ausbildungs- und Demonstrationszwecken und ist nicht für eine umfangreiche private oder geschäftliche Nutzung vorgesehen.
+Daher kann ich keine Gewähr für eine durchgehende Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder sonstige Qualitätsmerkmale dieses Produkts übernehmen.
+<br><br>
+Das Design von <a class="yellow">Portfolio</a> ist Eigentum der <a class="yellow">Developer Akademie GmbH</a>. Eine unbefugte Nutzung, Vervielfältigung, Änderung, Verbreitung oder Nachahmung des Designs ist strengstens untersagt.
             </p>
         </div>
         <div class="text-section">
-            <h5>Proprietary rights</h5>
-            <p>
-Aside from the design owned by Developer Akademie GmbH, we, the listed students, retain all proprietary rights in Portfolio, including any associated copyrighted material, trademarks, and other proprietary information.
+            <h5>{{ pageService.currentLanguage === 'en' ? "Proprietary rights" : 'Urheber- und Eigentumsrechte' }}</h5>
+            <p *ngIf="pageService.currentLanguage === 'en'">
+Aside from the design owned by <a class="yellow">Developer Akademie GmbH</a>, I, Hannah Luisa Anton, retain all proprietary rights in <a class="yellow">Portfolio</a>, including any associated copyrighted material, trademarks, and other proprietary information.
+            </p>
+            <p *ngIf="pageService.currentLanguage === 'de'">
+                Mit Ausnahme des Designs, das im Eigentum der <a class="yellow">Developer Akademie GmbH</a> steht, verbleiben sämtliche Eigentums- und Schutzrechte an <a class="yellow">Portfolio</a> bei mir, HLA. Dies umfasst insbesondere Urheberrechte, Markenrechte sowie sonstige gewerbliche Schutzrechte und proprietäre Informationen
             </p>
         </div>
         <div class="text-section">
-            <h5>Use of the product</h5>
-            <p>
-Portfolio is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of Portfolio for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of Portfolio.
+            <h5>{{ pageService.currentLanguage === 'en' ? "Use of the product" : 'Nutzung des Produkt' }}</h5>
+            <p *ngIf="pageService.currentLanguage === 'en'">
+<a class="yellow">Portfolio</a> is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of <a class="yellow">Portfolio</a> for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of <a class="yellow">Portfolio</a>.
+            </p>
+            <p *ngIf="pageService.currentLanguage === 'de'">
+                <a class="yellow">Portfolio</a> darf ausschließlich für rechtmäßige Zwecke und in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften genutzt werden.
+                Jegliche Nutzung von <a class="yellow">Portfolio</a> für rechtswidrige Aktivitäten oder um andere Personen zu belästigen, zu schädigen, zu bedrohen oder einzuschüchtern, ist strengstens untersagt.
+                Sie sind allein verantwortlich für Ihre Interaktionen mit anderen Nutzern von <a class="yellow">Portfolio</a>.
             </p>
         </div>
         <div class="text-section">
-            <h5>Disclaimer of warranties and limitation of liability</h5>
-            <p>
-Portfolio is provided "as is" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the Developer Akademie, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of Portfolio.
+            <h5>{{ pageService.currentLanguage === 'en' ? "Disclaimer of warranties and limitation of liability" : 'Haftungsausschluss für Gewährleistungen und Haftungsbeschränkung' }}</h5>
+            <p *ngIf="pageService.currentLanguage === 'en'">
+<a class="yellow">Portfolio</a> is provided "as is" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will I, Hannah Luisa Anton, or the <a class="yellow">Developer Akademie</a>, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of <a class="yellow">Portfolio</a>.
+            </p>
+            <p *ngIf="pageService.currentLanguage === 'de'">
+<a class="yellow">Portfolio</a> wird „wie besehen“ und ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt. Dies umfasst insbesondere, jedoch nicht abschließend, stillschweigende Gewährleistungen der Marktgängigkeit, der Eignung für einen bestimmten Zweck sowie der Nichtverletzung von Rechten Dritter.
+
+In keinem Fall haften ich, Hannah Luisa Anton, oder die <a class="yellow">Developer Akademie</a> für direkte oder indirekte Schäden, Neben- oder Folgeschäden, besondere oder exemplarische Schäden oder sonstige Schäden, einschließlich, jedoch nicht beschränkt auf, entgangenen Gewinn, Verlust von Geschäftswert (Goodwill), Nutzungsausfälle, Datenverluste oder andere immaterielle Schäden, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die sich aus der Nutzung oder der Leistung von <a class="yellow">Portfolio</a> ergeben oder damit in Zusammenhang stehen.
             </p>
         </div>
         <div class="text-section">
-            <h5>Indemnity</h5>
-            <p>
-You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice. <br><br>For any questions or notices, please contact me at hannah.anton&#64;gmx.de. <br><br>Date: January 20, 2026
+            <h5>{{ pageService.currentLanguage === 'en' ? "Indemnity" : 'Haftungsfreistellung' }}</h5>
+            <p *ngIf="pageService.currentLanguage === 'en'">
+You agree to indemnify, defend and hold harmless me, Hannah Luisa Anton, the <a class="yellow">Developer Akademie</a>, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of <a class="yellow">Portfolio</a> and/or your breach of this Legal Notice. <br><br>For any questions or notices, please contact me at hannah.anton&#64;gmx.de. <br><br>Date: January 20, 2026
+            </p>
+            <p *ngIf="pageService.currentLanguage === 'de'">
+Sie erklären sich damit einverstanden, mich, Hannah Luisa Anton, die <a class="yellow">Developer Akademie</a> sowie unsere verbundenen Unternehmen, Partner, Führungskräfte, Direktoren, Vertreter und Mitarbeiter von sämtlichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Verbindlichkeiten (einschließlich angemessener Anwaltskosten) freizustellen, zu verteidigen und schadlos zu halten, die sich aus oder im Zusammenhang mit Ihrer Nutzung von <a class="yellow">Portfolio</a> und/oder Ihrer Verletzung dieses Rechtshinweises ergeben.
+<br><br>
+Für Fragen oder Mitteilungen kontaktieren Sie mich bitte unter hannah.anton&#64;gmx.de. <br><br>
+
+Datum: 20. Januar 2026
             </p>
         </div>
 
@@ -75,7 +107,7 @@ You agree to indemnify, defend and hold harmless us, the listed students, the De
      <div class="footer">
             <p>© Hannah Luisa Anton 2026</p>
             <div>
-            <a routerLink="">Zurück</a>
+            <a routerLink="/privacypolicy"  (click)="switchCurrentPage()">{{ pageService.currentLanguage === 'en' ? "Privacy policy" : 'Datenschutzerklärung' }}</a>
             <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank">LinkedIn</a>
             <a href="https://github.com/hl4ntn" target="_blank">GitHub</a>
         </div>
