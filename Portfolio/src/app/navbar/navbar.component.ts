@@ -9,9 +9,10 @@ import { PagesService } from '../pages.service';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
+
 export class NavbarComponent1 {
     constructor(public pageService: PagesService) {}
-
+menuOpen = false;
     toggleLanguage(){
       if(this.pageService.currentLanguage == "en"){
         this.pageService.currentLanguage = "de"
@@ -19,4 +20,9 @@ export class NavbarComponent1 {
         this.pageService.currentLanguage = "en"
       }
     }
+
+    toggleMenu(){
+      this.menuOpen = !this.menuOpen;
+    }
+
 }

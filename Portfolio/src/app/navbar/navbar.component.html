@@ -12,30 +12,18 @@
     </div>
     <div class="menu-options">
         <button class="btn_white" (click)="toggleLanguage()"> {{ pageService.currentLanguage === 'en' ? 'DE' : 'EN' }}</button>
-        <div class="burger_menu_white"></div>
-        <div class="hover-div">
-                    <h4>{{ pageService.currentLanguage === 'en' ? "More about me" : 'Mehr über mich' }}</h4>
+        <div (click)="toggleMenu()" class="burger_menu_white"></div>
+        <div [class.open]="menuOpen" class="hover-div">
+                    <div>
+                        <h4>Menu</h4>
+                        <div class="close_button" (click)="toggleMenu()"></div>
+                    </div>
                     <div class="skills">
-                    <div>
-                        <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>{{ pageService.currentLanguage === 'en' ? "Organised" : 'Organisiert' }}</p>
-                    </div>
-                    <div>
-                        <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>{{ pageService.currentLanguage === 'en' ? "Continously learning" : 'Lernbereit' }}</p>
-                    </div>
-                    <div>
-                        <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>{{ pageService.currentLanguage === 'en' ? "Analytical Thinker" : 'Analytisch' }}</p>
-                    </div>
-                    <div>
-                        <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>{{ pageService.currentLanguage === 'en' ? "Based in Hannover" : 'Wohnhaft in Hannover' }}</p>
-                    </div>
-                    <div>
-                        <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>{{ pageService.currentLanguage === 'en' ? "Open to work remote" : 'Offen für Remote-Arbeit' }}</p>
-                    </div>
+                        <a [href]="'#1'">{{ pageService.currentLanguage === 'en' ? "About Me" : 'Über mich' }}</a>
+                        <a [href]="'#2'">{{ pageService.currentLanguage === 'en' ? "Skills" : 'Skillset' }}</a>
+                        <a [href]="'#3'">{{ pageService.currentLanguage === 'en' ? "Portfolio" : 'Portfolio' }}</a>
+                        <a [href]="'#4'">{{ pageService.currentLanguage === 'en' ? "References" : 'Referenzen' }}</a>
+                        <a [href]="'#5'">{{ pageService.currentLanguage === 'en' ? "Contact me" : 'Kontakt' }}</a>
                     </div>
                 </div>
     </div>
@@ -48,7 +36,20 @@
     </div></a>
     <div class="menu-options">
         <button class="btn_white" (click)="toggleLanguage()">{{ pageService.currentLanguage === 'en' ? 'DE' : 'EN' }}</button>
-        <div class="burger_menu_white"></div>
+        <div  (click)="toggleMenu()" class="burger_menu_white"></div>
+        <div [class.open]="menuOpen" class="hover-div">
+                    <div>
+                        <h4>Menu</h4>
+                        <div class="close_button" (click)="toggleMenu()"></div>
+                    </div>
+                    <div class="skills">
+                        <a [href]="'#1'">{{ pageService.currentLanguage === 'en' ? "About Me" : 'Über mich' }}</a>
+                        <a [href]="'#2'">{{ pageService.currentLanguage === 'en' ? "Skills" : 'Skillset' }}</a>
+                        <a [href]="'#3'">{{ pageService.currentLanguage === 'en' ? "Portfolio" : 'Portfolio' }}</a>
+                        <a [href]="'#4'">{{ pageService.currentLanguage === 'en' ? "References" : 'Referenzen' }}</a>
+                        <a [href]="'#5'">{{ pageService.currentLanguage === 'en' ? "Contact me" : 'Kontakt' }}</a>
+                    </div>
+                </div>
     </div>
 </section>
             } @else {
@@ -60,7 +61,20 @@
     </div></a>
     <div class="menu-options">
         <button class="btn_black" (click)="toggleLanguage()">{{ pageService.currentLanguage === 'en' ? 'DE' : 'EN' }}</button>
-        <div class="burger_menu_black"></div>
+        <div  (click)="toggleMenu()" class="burger_menu_black"></div>
+        <div [class.open]="menuOpen" class="hover-div">
+                    <div>
+                        <h4>Menu</h4>
+                        <div class="close_button" (click)="toggleMenu()"></div>
+                    </div>
+                    <div class="skills">
+                        <a [href]="'#1'">{{ pageService.currentLanguage === 'en' ? "About Me" : 'Über mich' }}</a>
+                        <a [href]="'#2'">{{ pageService.currentLanguage === 'en' ? "Skills" : 'Skillset' }}</a>
+                        <a [href]="'#3'">{{ pageService.currentLanguage === 'en' ? "Portfolio" : 'Portfolio' }}</a>
+                        <a [href]="'#4'">{{ pageService.currentLanguage === 'en' ? "References" : 'Referenzen' }}</a>
+                        <a [href]="'#5'">{{ pageService.currentLanguage === 'en' ? "Contact me" : 'Kontakt' }}</a>
+                    </div>
+                </div>
     </div></section>
             }
     
