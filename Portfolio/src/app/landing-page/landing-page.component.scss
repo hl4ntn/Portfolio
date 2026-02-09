@@ -18,7 +18,7 @@
     padding-left: 40px;
     padding-right: 40px;
     justify-content: space-between;
-    width: 100%;
+    width: calc(100% - 80px);
 }
 
 .left_screen{
@@ -89,7 +89,6 @@
 
 .photo-container{
     position: relative;
-    width: 792px;
     height: 100%;
 }
 

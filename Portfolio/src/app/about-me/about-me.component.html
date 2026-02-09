@@ -7,12 +7,8 @@
         <div class="left_part">
             <img src="../../assets/imgs/photo2.png" alt="photo">
         </div>
-        <div class="right_part">
             <h3>{{ pageService.currentLanguage === 'en' ? "About me" : 'Über mich' }}</h3>
-            
-        </div>
-        
-        
+        <div class="floating_div">
         <div class="text_box">
               <p *ngIf="pageService.currentLanguage === 'en'">
     Hey there, I’m Hannah. I’m passionate about bringing customers’ ideas to life
@@ -58,6 +54,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
   </div>      
 <app-dots></app-dots>

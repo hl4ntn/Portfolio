@@ -28,17 +28,31 @@
     position: relative;
 }
 
+h3{
+  top: 100px;
+  right: 40px;
+  position: absolute;
+}
+
+.floating_div{
+      position: relative;
+    height: 100%;
+    padding-right: 120px;
+    display: flex;
+    align-items: center;
+}
+
 .text_box{
     height: 250px;
-    position: absolute;
+    // position: absolute;
     min-width: 600px;
     max-width: 918px;
     border-radius: 4px;
     padding: 32px;
     background-color: #1D1D1D;
     color: #F8F7E5;
-    top: 400px;
-    left: 560px;
+    // top: 400px;
+    // left: 560px;
     >div{
         display: flex;
         justify-content: space-between;
@@ -107,8 +121,8 @@ h4{
   position: absolute;
   width: 272px;
   min-height: 263px;
-  top: 91%;
-  left: 90%;
+      top: 60%;
+    right: 20px;
   border-radius: 4px;
   border: 1px solid #1D1D1D;
   padding: 32px;
@@ -162,6 +176,20 @@ h4{
 
 
 
-.right_part{
-    display: flex;
+// .right_part{
+//     display: flex;
+// }
+
+@media (max-height: 916px){
+    .hover-div{
+        top: 50%;
+    }
+}
+
+
+@media (max-height: 764px){
+    .hover-div{
+        bottom: 20px;
+        top: auto;
+    }
 }
