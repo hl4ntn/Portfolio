@@ -17,6 +17,8 @@ export class AboutMeComponent implements AfterViewInit {
   constructor(public pageService: PagesService) {  
     }
 
+    isHovered = false;
+
  ngAfterViewInit() {
     const el = document.getElementById('1');
     if (!el) return;

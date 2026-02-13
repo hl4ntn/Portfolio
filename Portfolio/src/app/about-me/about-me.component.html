@@ -1,6 +1,7 @@
 
 
 <div id="1" class="content scroll">
+    
     <app-navbar1></app-navbar1>
     <div class="content_wrapper">
     <div class="main">
@@ -21,15 +22,28 @@
   </p>
 
   <p *ngIf="pageService.currentLanguage === 'de'">
-    Hey, ich bin Hannah. Die Projekte meiner Kund*innen von Anfang bis Ende zu gestalten zu können und sie während des gesamten Prozesses zu begleiten begeistert mich. Probleme lösen und Lösungen finden, die anderen sowie mir sebst das Leben erleichtern: das ist was mich täglich antreibt. Fehlermeldungen motivieren mich, tiefer in die Logik einzutauchen.
+    Hey, ich bin Hannah. Die Projekte meiner Kund*innen von Anfang bis Ende zu gestalten und sie während des gesamten Prozesses zu begleiten begeistert mich. Probleme lösen und Lösungen finden, das Leben erleichtern: das ist was mich täglich antreibt.
     <br><br>
     Lass uns vernetzen und gemeinsam etwas Tolles erschaffen!
   </p>
             <div>
-                <a [href]="'#5'">{{ pageService.currentLanguage === 'en' ? "Let's Talk" : 'Nimm Kontakt auf' }}</a>
+                <a [href]="'#5'">{{ pageService.currentLanguage === 'en' ? "Let's Talk" : 'Kontaktier mich' }}</a>
                 <img src="../../assets/imgs/icons/emoji1.png" alt="emoji">
-                <div class="hover-div">
+                
+            </div>
+            <div  (mouseenter)="isHovered = true"  (mouseleave)="isHovered = false"  class="hover_img"></div>
+        </div>
+        </div>
+  </div>      
+<app-dots></app-dots>
+</div>
+<div  [class.active]="isHovered" class="invisible_div">
+
+                <div  (mouseenter)="isHovered = true"  (mouseleave)="isHovered = false"  class="hover-div">
+                    <div class="close_bbutton_activated">
                     <h4>{{ pageService.currentLanguage === 'en' ? "More about me" : 'Mehr über mich' }}</h4>
+                    <div (click)="isHovered= false"></div>
+                    </div>
                     <div class="skills">
                     <div>
                         <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
@@ -49,15 +63,10 @@
                     </div>
                     <div>
                         <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>{{ pageService.currentLanguage === 'en' ? "Open to work remote" : 'Offen für Remote-Arbeit' }}</p>
+                        <p>{{ pageService.currentLanguage === 'en' ? "Open to work remote" : 'Remote-Arbeit möglich' }}</p>
                     </div>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
-  </div>      
-<app-dots></app-dots>
-</div>
 </div>
 

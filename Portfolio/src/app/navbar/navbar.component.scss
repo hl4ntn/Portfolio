@@ -185,3 +185,14 @@ button:hover{
     border: 1px solid #F8F7E5;
     color: #F8F7E5;
 }
+
+@media (max-width: 995px){
+    .navbar_white{
+        display: none;
+    }
+     .navbar_black{
+        display: none;
+    }
+   
+    
+}
