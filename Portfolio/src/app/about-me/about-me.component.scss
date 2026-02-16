@@ -125,24 +125,25 @@ h4{
     width: 100vw;
     height: 100vh;
     top: 0;
+    display: flex;
     position: absolute;
-    display: none;
     align-items: end;
     padding: 72px 100px;
     justify-content: flex-end;
+    transform: translateY(100%);
+  transition: transform 0.35s ease-in-out;
 }
 
 .invisible_div.active{
-  display: flex!important;
+   transform: translateY(0);
 }
 
-.hover-div{
+.hover-div-aboutMe{
   background-color: #679AAC;
-  // position: absolute;
   width: 272px;
   min-height: 263px;
-      top: 60%;
-    right: 20px;
+    //   top: 60%;
+    // right: 20px;
   border-radius: 4px;
   border: 1px solid #1D1D1D;
   padding: 32px;
@@ -150,14 +151,11 @@ h4{
   display: flex;
   flex-direction: column;
   gap: 16px;
-
-  // opacity: 0;
-  // visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-
-  
 }
+
+
+
+
 
 
 
@@ -213,7 +211,7 @@ h4{
 .skills{
       padding-left: 8px;
 }
-.hover-div{
+.hover-div-aboutMe{
       padding: 32px 18px;
 }
 
@@ -221,14 +219,14 @@ h4{
 }
 
 @media (max-height: 916px){
-    // .hover-div{
+    // .hover-div-aboutMe{
     //     top: 50%;
     // }
 }
 
 
 @media (max-height: 764px){
-    // .hover-div{
+    // .hover-div-aboutMe{
     //     bottom: 20px;
     //     top: auto;
     // }
@@ -274,6 +272,8 @@ h4{
     .invisible_div.active{
           padding: 20px 120px;
     }
+    
+
 }
 
 @media (max-width: 1225px){

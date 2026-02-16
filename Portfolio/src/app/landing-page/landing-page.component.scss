@@ -106,9 +106,138 @@
     z-index: 2;
 }
 
-@media (max-height: 1000px){
-    .hover-div{
-
+@media (max-width: 1350px){
+    h1{
+        font-size: 72px;
     }
+    h2{
+        font-size: 32px;
+    }
+    .bottomright{
+        height: 560px;
+        right: 70px;
+    }
+    .topright{
+            top: 20%;
+    right: 20px;
+    height: 55%;
+    }
+    .main-content{
+        padding: 0;
+    }
+    .scroll_icon{
+        >.scroll_icon{
+        height: 100px;
+        width: 100px;
+    }
+    
+    >.arrow_down{
+        left: 38px;
+        top: 39px;
+            width: 25.57px;
+    height: 25px;
+    }
+}
+    
+}
+
+@media (max-width: 995px){
+    .bottomright{
+        right: 0px;
+    }
+    .topright{
+   
+    }
+    .main{
+        padding: 0px;
+    }
+     
+}
+
+
+@media (max-width: 925px){
+    .bottomright{
+        height: 460px;    
+    }
+    .topright {
+        top: 30%;
+        right: -20px;
+        height: 45%;
+    }
+        
+}
+
+@media (max-width: 755px){
+    .main_content{
+            padding-top: 24px;
+                padding-left: 24px;
+    padding-right: 24px;
+    width: unset;
+    }
+    .margin20{
+        margin: 0;
+    }
+    .bottomright{
+        height: 420px;;
+    }
+    .topright{
+                top: 38%;
+        right: -20px;
+        height: 35%;
+    }
+    .content{
+        width: unset;
+    }
+    .heading{
+        width: unset;
+    }
+        
+}
+
+@media (max-width: 495px){
+  .bottomright{
+            height: 340px;
+  }
+  .topright{
+    top: 50%;
+        right: -20px;
+        height: 29%;
+  }
+  .main_content{
+            padding-top: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+  }
+  h1{
+            font-size: 64px;
+  }
+        
+}
+
+@media (max-width: 406px){
+  h1{
+            font-size: 45px;
+  }
+  h2{
+    font-size: 24px;
+  }
+  .left_screen{
+        padding-bottom: 2px;
+    >a{
+            padding: 10px 12px;
+            font-size: 16px;
+    }
+  }
+  .scroll_icon{
+    >.scroll_icon{
+        z-index: 999;
+            background-color: #679AAC;
+        border-radius: 100%;
+    }
+    >.arrow_down{
+        z-index: 1000;
+    }
+  }
+        
 }
 

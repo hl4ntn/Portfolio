@@ -115,7 +115,7 @@ section{
   display: flex;
   flex-direction: column;
   gap: 16px;
-      z-index: 99;
+  z-index: 99;
         transition: transform 0.35s ease-in-out;
           transform: translateX(130%);
 >div{
@@ -193,6 +193,18 @@ button:hover{
      .navbar_black{
         display: none;
     }
+   
+    
+}
+
+@media (max-width: 754px){
+    .socials{
+        display: none;
+    }
+    section{
+        padding: 24px 16px;
+    }
+    
    
     
 }

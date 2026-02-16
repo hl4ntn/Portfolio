@@ -39,7 +39,7 @@
 </div>
 <div  [class.active]="isHovered" class="invisible_div">
 
-                <div  (mouseenter)="isHovered = true"  (mouseleave)="isHovered = false"  class="hover-div">
+                <div  (mouseenter)="isHovered = true"  (mouseleave)="isHovered = false" class="hover-div-aboutMe">
                     <div class="close_bbutton_activated">
                     <h4>{{ pageService.currentLanguage === 'en' ? "More about me" : 'Mehr über mich' }}</h4>
                     <div (click)="isHovered= false"></div>
