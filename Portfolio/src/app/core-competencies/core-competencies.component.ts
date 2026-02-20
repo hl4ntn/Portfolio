@@ -11,10 +11,16 @@ import { CommonModule } from '@angular/common';
   templateUrl: './core-competencies.component.html',
   styleUrl: './core-competencies.component.scss'
 })
+
+
+
 export class CoreCompetenciesComponent implements AfterViewInit {
    constructor(public pageService: PagesService) {  
     }
- ngAfterViewInit() {
+    
+    isHovered = false;
+ 
+    ngAfterViewInit() {
     const el = document.getElementById('2');
     if (!el) return;
 

@@ -11,10 +11,13 @@
 
         </div>
         <div class="bottom_part">
-            <div class="turning_sun_div">
+            <div (mouseenter)="isHovered = true"  (mouseleave)="isHovered = false"  class="turning_sun_div">
                 <img class="turning_sun" src="../../assets/imgs/icons/sun_icon_orange.png" alt="sun icon">
                 <img class="heat_icon" src="../../assets/imgs/icons/heat_emoji.png" alt="heat icon">
-                <div class="hover-div">
+                <div [class.active]="isHovered" class="hover-div"  (mouseenter)="isHovered = true"  (mouseleave)="isHovered = false">
+                    <div class="close_button_activated">
+                    <div (click)="isHovered= false"></div>
+                    </div>
                     <h4>{{ pageService.currentLanguage === 'en' ? "Don't see the skill you are looking for?" : 'Findest du nicht, wonach du suchst?' }}</h4>
                     <div class="overlay_content">
                    
