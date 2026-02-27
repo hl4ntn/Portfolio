@@ -116,3 +116,31 @@ h3{
 .reference_box:hover img{
     visibility: visible;
 }
+
+@media(max-width: 1440px){
+  .content{
+    padding: 36px 0px;
+    padding-right: 24px;
+}
+.reference_box{
+    top: 12px;
+    right: 12px;
+}
+}
+
+@media(max-height: 860px){
+    h3{
+            font-size: 56px;
+    }
+    .reference_box:hover{
+        padding: 16px;
+    }
+    .content{
+    padding: 36px 0px;
+    padding-right: 24px;
+}
+.reference_box{
+    top: 12px;
+    right: 12px;
+}
+}
