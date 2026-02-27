@@ -25,10 +25,10 @@
 
 .content{
     padding: 10vh 52px;
-    width: 100%;
     padding-right: 36px;
     display: flex;
     flex-direction: column;
+    width: calc(100vw - 246px);
 }
 
 .projects{
@@ -115,7 +115,7 @@
     }
     >div{
         display: flex;
-        gap: 32px;
+        // gap: 32px;
 
         >a{
             color: #F8F7E5;
@@ -223,3 +223,276 @@ a:hover .rotate{
 
   
 }
+
+@media(max-width: 1448px){
+    h3{
+        font-size: 56px;
+    }
+    .preview{
+            width: 358px;
+    height: 358px;
+        flex-shrink: 0;
+    }
+    .screenshot{
+            width: 303.52px;
+    height: 215.84px;
+        left: 27.24px;
+        top: 71.08px;
+    }
+    .explanation_box{
+        flex-grow: 1;
+        min-width: unset;
+        flex: auto;
+    }
+
+
+
+    .content{
+            padding: 48px 0px;
+            padding-right: 36px;
+    }
+    .explanation_box[_ngcontent-ng-c1515740445] {
+   min-width: unset;
+}
+    .heading{
+        // width: unset;
+        // >p{
+        //     width: 500px;
+        // }
+    }
+    .preview{
+            width: 420px;
+    height: 420px;
+    }
+    .screenshot{
+            width: 303.52px;
+    height: 215.84px;
+        left: 58.905px;
+    top: 102.745px;
+    }
+}
+
+@media(max-width: 1400px){
+    .content{
+            padding: 48px 0px;
+            padding-right: 36px;
+    }
+    .heading{
+        // width: unset;
+        >p{
+            // width: 500px;
+        }
+    }
+
+}
+
+@media(max-width: 1120px){
+ .preview {
+        width: 358px;
+        height: 358px;
+       
+    }
+    .hover-div{
+        width: 240px;
+    }
+    .screenshot{
+        left: 27.24px;
+       
+        top: 71.08px; 
+    }
+    .project_presentation{
+            gap: 8px;
+            padding: 16px;
+            >img{
+                top: 20px;
+    right: 16px;
+            }
+            >div{
+                >a{
+                        font-size: 16px;
+                }
+            }
+    }
+    .butttons_div{
+            font-size: 14px;
+    }
+
+
+
+
+
+    .projects{
+        flex-direction: column;
+        padding: 0;
+        gap: unset;
+                align-items: flex-start;
+        justify-content: space-around;
+    }
+    .heading{
+    gap: unset;
+    align-items: flex-start;
+    flex-direction: column;
+    }
+    h3{
+        font-size: 54px;
+    }
+    .project_presentation{
+        height: unset;
+    }
+    .explanation_box{
+        flex: unset;
+    }
+    @media(max-height: 772px){
+        .projects{
+                    gap: 16px;
+        align-items: center;
+        }
+        .preview{
+                    width: 358px;
+        height: 240px;
+        }
+        .screenshot{
+                    width: 306.52px;
+        height: 215.84px;
+        left: 25.74px;
+        top: 12.08px;
+        }
+        .icon{
+            height: 92px;
+            width: 92px;
+        }
+            .project_presentation {
+        height: 142px;
+        gap: 8px;
+        >div{
+            >a{
+                font-size: 14px;
+                padding: 9px 18px;
+            }
+        }
+    }
+    .explanation_text{
+        font-size: 14px;
+    }
+}}
+
+@media(max-width:995px){
+     .content{
+        height: 100%;
+        width: unset;
+        padding-right: 0px;
+    }
+    .heading{
+        width: unset;
+    }
+    .main{
+        padding: 0 12px;
+    }
+    .hover-div{
+            width: 320px;
+    }
+}
+
+@media(max-width:447px){
+ .preview {
+        width: 358px;
+        height: 358px;
+       
+    }
+    .hover-div{
+        width: 240px;
+    }
+    .screenshot{
+        left: 27.24px;
+       
+        top: 71.08px; 
+    }
+    .project_presentation{
+            gap: 8px;
+            padding: 16px;
+            >img{
+                top: 20px;
+    right: 16px;
+            }
+            >div{
+                >a{
+                        font-size: 16px;
+                }
+            }
+    }
+    .butttons_div{
+            font-size: 14px;
+    }
+
+    @media(max-height:850px){
+        .icon{
+            width: 92px;
+            height: 92px;
+        }
+        .screenshot{
+                    left: 76.42px;
+        top: 8px;
+                width: 206.49px;
+        height: 145.84px;
+        }
+            .preview {
+        width: 358px;
+        height: 158px;
+    }
+    .projects{
+                gap: 16px;
+    }
+    .explanation_text{
+        font-size: 14px;
+    }
+    .project_presentation{ 
+        > div {
+           > a {
+        font-size: 14px;
+            padding: 6px 12px;
+    } 
+        }}
+
+    }
+}
+
+
+@media(max-width:382px){
+
+
+    @media(max-height:850px){
+       
+    .preview{
+        width: 308px;
+    }
+    .screenshot{
+                left: 50.755px;
+    }
+   
+}}
+
+@media (pointer:coarse){
+  .close_button_activated{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  >div{
+    background-image: url(../../assets/imgs/icons/close_button_white.png);
+    width: 32px;
+    height: 32px;
+    &:hover + .hover-div{
+        cursor: pointer;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transform: translateY(0) !important;
+    }
+  }
+  
+  }
+}.hover-div{
+        padding-bottom: 32px;
+        padding: 16px;
+        gap: 0;
+    >p{
+        margin: 0px;;
+    }}
