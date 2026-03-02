@@ -320,4 +320,150 @@ textarea:focus {outline: none !important;}
   
 
 }
+@media(max-width: 1730px){
+    .page{
+        flex-direction: unset;
+        gap: 32px;
+        padding-left: 0;
+
+    }
+    .left_part{
+        min-width: unset;
+        flex-grow: 1;
+    }
+    .right_part{
+        min-width: unset;
+    }
+}
+
+@media(max-width: 1403px){
+    .page{
+    flex-direction: column;
+    gap: 0;
+        height: calc(100vh - 93.33px);
+        padding: 0px;
+        padding-right: 52px;
+    }
+    .left_part{
+        flex-grow: unset;
+    }
+    .right_part{
+        padding-bottom: 0;
+        gap: unset;
+    }
+    .personal_data{
+        justify-content: flex-start;
+    }
+    .short{
+        width: unset;
+    }
+}
+
+@media(max-width: 995px){
+    .main{
+        padding: 56px;
+        padding-bottom: 0;
+    }
+    .footer{
+        position: unset;
+        width: unset;
+    }
+    .arrow_div{
+        top: 600px;
+    }
+    .page{
+        padding: 0;
+    }
+}
+
+@media(max-width: 884px){
+    .main{
+        padding: 42px;
+    }
+}
+
+@media(max-width: 855px){
+   h3{
+        font-size: 56px;
+   }
+   h4{
+    font-size: 20px;
+   }
+   h5{
+    font-size: 20px;
+   }
+    .arrow_div{
+        top: 500px;
+    }
+        .short{
+    width: 238px;
+ }
+}
+
+@media(max-width: 682px){
+    .main{
+        padding: 32px;
+    }
+    .blue_sun{
+            width: 251.75px;
+    height: 251.75px;
+    }
+   .orange_sun{
+     width: 172.3px;
+    height: 172.3px;
+   }
+   .page{
+    height: 100vh;
+   }
+   .footer{
+        width: 85vw;
+   }
+   
+
+}
+
+@media(max-width: 650px){
+  .arrow_div{
+        top: 600px;
+    }
+}
+
+@media(max-width: 662px){
+ .short{
+    width: 208px;
+ }
+ .personal_data{
+    gap: 10px;
+ }
+}
+
+@media(max-width: 590px){
+    .footer{
+        flex-direction: column;
+            align-items: center;
+            >div{
+                    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+            }
+    }
+    .right_part{
+        >div{
+            gap: 0 !important;
+        }
+    }
+    .short{
+        gap: 0;
+    }
+    h3{
+        font-size: 40px;
+    }
+    h4{
+            margin: 10px 0;
+    }
+    .border_bottom{
+        padding: 8px;
+    }
+    
+}
 
