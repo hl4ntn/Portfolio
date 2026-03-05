@@ -334,6 +334,14 @@ textarea:focus {outline: none !important;}
     .right_part{
         min-width: unset;
     }
+        @media(max-height:860px){
+        .blue_sun{
+            display: none;
+        }
+        .orange_sun{
+            display: none;
+        }
+    }
 }
 
 @media(max-width: 1403px){
@@ -356,6 +364,17 @@ textarea:focus {outline: none !important;}
     }
     .short{
         width: unset;
+    }
+    @media(max-height: 767px){
+        .footer{
+            padding-bottom: 0px;
+        }
+        h3{
+                font-size: 56px;
+        }
+        h4{    
+            margin: 12px;
+        }
     }
 }
 
@@ -382,6 +401,12 @@ textarea:focus {outline: none !important;}
         .orange_sun{
             display: none;
         }
+    }
+
+      @media(max-height: 655px){
+      .border_bottom{
+        padding: 8px;
+      }
     }
 }
 
@@ -427,6 +452,11 @@ textarea:focus {outline: none !important;}
    .footer{
         width: 85vw;
    }
+      @media(max-height: 655px){
+      h3{
+                font-size: 40px;
+      }
+    }
    
 
 }
@@ -508,8 +538,30 @@ textarea:focus {outline: none !important;}
         }
     }
     
-    
-}
+      @media(max-height: 655px){
+       p{
+        margin: 2px;
+        font-size: 14px;
+       }
+       .main{
+        padding: 16px;
+       }
+       h4{
+                margin: 6px 0;
+                font-size: 16px;
+    }
+    h5{
+        font-size: 16px;
+    }
+    .input{
+        font-size: 14px;
+    }
+    a{
+        font-size: 14px;
+    }
+       }
+    }
+
 
 @media(max-width: 503px){
     .arrow_div{
@@ -524,12 +576,41 @@ textarea:focus {outline: none !important;}
             display: none;
         }
     }
-}
+       @media(max-height: 732px){
+      p{
+        margin: 0;
+      }
+    }}
 
 @media(max-width: 420px){
     .arrow_div{
         top: 660px;
    
+    }
+    .main{
+        padding: 16px;
+    }
+            @media(max-height: 781px){
+        h3{
+                    font-size: 28px;
+        }
+        h4{
+                    font-size: 16px;
+        }
+        h5{
+                    font-size: 16px;
+        }
+        .input{
+                font-size: 14px;
+                    height: 18px;
+        }
+        .border_bottom{
+            min-height: unset;
+        }
+        .footer{
+            width: unset;
+            padding-bottom: unset;
+        }
     }
 }
 
