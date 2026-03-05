@@ -1,6 +1,6 @@
 <div class="content scroll">
 
-    <section>
+    <section class="navbar_white">
     <a style="text-decoration: none;" [href]="'#0'"><div class="name_header">
         <img src="./../../../assets/imgs/icons/logo.png" alt="logo">
         <a routerLink="" class="white">H.L.A.</a>
@@ -88,10 +88,10 @@ In keinem Fall haften ich, Hannah Luisa Anton, oder die <a class="yellow">Develo
         </div>
         <div class="text-section">
             <h5>{{ pageService.currentLanguage === 'en' ? "Indemnity" : 'Haftungsfreistellung' }}</h5>
-            <p *ngIf="pageService.currentLanguage === 'en'">
+            <p class="padding_bottom" *ngIf="pageService.currentLanguage === 'en'">
 You agree to indemnify, defend and hold harmless me, Hannah Luisa Anton, the <a class="yellow">Developer Akademie</a>, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of <a class="yellow">Portfolio</a> and/or your breach of this Legal Notice. <br><br>For any questions or notices, please contact me at hannah.anton&#64;gmx.de. <br><br>Date: January 20, 2026
             </p>
-            <p *ngIf="pageService.currentLanguage === 'de'">
+            <p class="padding_bottom" *ngIf="pageService.currentLanguage === 'de'">
 Sie erklären sich damit einverstanden, mich, Hannah Luisa Anton, die <a class="yellow">Developer Akademie</a> sowie unsere verbundenen Unternehmen, Partner, Führungskräfte, Direktoren, Vertreter und Mitarbeiter von sämtlichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Verbindlichkeiten (einschließlich angemessener Anwaltskosten) freizustellen, zu verteidigen und schadlos zu halten, die sich aus oder im Zusammenhang mit Ihrer Nutzung von <a class="yellow">Portfolio</a> und/oder Ihrer Verletzung dieses Rechtshinweises ergeben.
 <br><br>
 Für Fragen oder Mitteilungen kontaktieren Sie mich bitte unter hannah.anton&#64;gmx.de. <br><br>
