@@ -176,6 +176,10 @@ p{
     animation: turn_left 8s linear infinite;
 }
 
+.padding_bottom{
+        padding-bottom: 40px;
+}
+
 .footer{
     position: absolute;
     width: 50vw;
@@ -218,12 +222,62 @@ p{
     transform: rotate(0deg);
     }
 }
+@media(max-width: 1060px){
+    .main {
+        padding: 0;
+    }
+    .footer{
+        width: unset;
+            align-items: center;
+            gap: 8px;
+                flex-direction: column;
+    }
+}
 
 @media (max-width: 995px){
     .navbar_white{
         display: none;
     }
+      .main_content{
+            padding-left: 40px;
+    }
+    .blue_sun{
+        left: 60px;
+
+    }
+    .orange_sun{
+        left: 0px;
+    }
+    h3{
+            font-size: 50px;
+    }
    
    
     
+}
+
+@media(max-width: 646px){
+       .blue_sun{
+        display: none;
+
+    }
+    .orange_sun{
+        display: none;
+    }
+    .footer{
+        right: unset;
+        width: 100vw;
+
+    }
+      h3{
+           
+                    word-break: break-all;
+    }
+   
+}
+
+@media(max-width: 468px){
+    h3{
+        font-size: 40px;
+    }
 }
