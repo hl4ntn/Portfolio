@@ -1,47 +1,47 @@
-.dots{
+.dots {
     display: flex;
     flex-direction: column;
-    gap: 20px;   
+    gap: 20px;
     justify-content: center;
     height: 100%;
 }
 
-.dot{
+.dot {
     width: 8px;
     height: 8px;
     border-radius: 100px;
     rotate: 45deg;
 }
 
-.dot:hover{
+.dot:hover {
     cursor: pointer;
 }
 
-.diamont{
+.diamont {
     width: 8px;
     height: 8px;
-    
+
     rotate: 45deg;
 }
 
-.yellow{
+.yellow {
     background-color: #F9AF42;
 }
 
-.orange{
+.orange {
     background-color: #FF834F;
 }
 
-.white{
+.white {
     background-color: #F8F7E5;
 }
 
-.black{
+.black {
     background-color: #1D1D1D;
 }
 
-@media (max-width: 995px){
-    .dots{
+@media (max-width: 995px) {
+    .dots {
         display: none;
     }
 }

@@ -1,4 +1,4 @@
-section{
+section {
     display: flex;
     padding: 24px 72px;
     justify-content: space-between;
@@ -6,164 +6,181 @@ section{
     position: relative;
 }
 
-.socials{
+.socials {
     display: flex;
     gap: 8px;
     height: 32px;
-    >.github{
+
+    >.github {
         background-image: url(./../../assets/imgs/icons/github.png);
         width: 32px;
         height: 32px;
     }
-    .github:hover{
+
+    .github:hover {
         background-image: url(./../../assets/imgs/icons/github_orange.png);
         cursor: pointer;
     }
-    >.linkedin{
+
+    >.linkedin {
         background-image: url(./../../assets/imgs/icons/linkedin.png);
         width: 32px;
         height: 32px;
     }
-    .linkedin:hover{
+
+    .linkedin:hover {
         background-image: url(./../../assets/imgs/icons/linkedin_orange.png);
         cursor: pointer;
     }
-    >.mail{
+
+    >.mail {
         background-image: url(./../../assets/imgs/icons/mail.png);
         width: 32px;
         height: 32px;
     }
-    .mail:hover{
+
+    .mail:hover {
         background-image: url(./../../assets/imgs/icons/mail_orange.png);
         cursor: pointer;
     }
 }
 
-.name_header{
+.name_header {
     display: flex;
     gap: 12px;
     align-items: center;
-    >img{
-       width: 29.07px;
-        height: 40px; 
+
+    >img {
+        width: 29.07px;
+        height: 40px;
     }
-    >p{
+
+    >p {
         font-size: 36px;
         margin: 0;
         font-weight: 600;
     }
-    &:hover{
+
+    &:hover {
         cursor: pointer;
     }
 }
 
-.name_header:hover .black{
+.name_header:hover .black {
     cursor: pointer;
     color: #FF834F;
 }
 
-.name_header:hover .white{
+.name_header:hover .white {
     cursor: pointer;
     color: #FF834F;
 }
 
-.white{
+.white {
     color: #F8F7E5;
 }
 
-.black{
+.black {
     color: #1D1D1D;
 }
 
-.menu-options{
+.menu-options {
     display: flex;
     gap: 16px;
     align-items: center;
-    .burger_menu_black{
+
+    .burger_menu_black {
         width: 32px;
-        height: 32px; 
+        height: 32px;
         background-image: url(./../../assets/imgs/icons/menu_black.png);
     }
-    .burger_menu_black:hover{
-        cursor: pointer; 
+
+    .burger_menu_black:hover {
+        cursor: pointer;
         background-image: url(./../../assets/imgs/icons/menu_orange.png);
     }
-    .burger_menu_white{
+
+    .burger_menu_white {
         width: 32px;
-        height: 32px; 
+        height: 32px;
         background-image: url(./../../assets/imgs/icons/menu_white.png);
     }
-    .burger_menu_white:hover{
-        cursor: pointer; 
+
+    .burger_menu_white:hover {
+        cursor: pointer;
         background-image: url(./../../assets/imgs/icons/menu_orange.png);
     }
-    
+
 }
 
-.hover-div{
-  background-color: #F8F7E5;
-  position: absolute;
-  width: 176px;
-  top: 10px;
-  right: 64px;
-  border-radius: 4px;
-  border: 1px solid #1D1D1D;
-  padding: 16px;
-  font-size: 18px;
-  line-height: 120%;
-  font-weight: 700;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  z-index: 99;
-        transition: transform 0.35s ease-in-out;
-          transform: translateX(130%);
->div{
+.hover-div {
+    background-color: #F8F7E5;
+    position: absolute;
+    width: 176px;
+    top: 10px;
+    right: 64px;
+    border-radius: 4px;
+    border: 1px solid #1D1D1D;
+    padding: 16px;
+    font-size: 18px;
+    line-height: 120%;
+    font-weight: 700;
     display: flex;
-    justify-content: space-between;
-    >.close_button{
-        background-image: url(../../assets/imgs/icons/close_button.png);
+    flex-direction: column;
+    gap: 16px;
+    z-index: 99;
+    transition: transform 0.35s ease-in-out;
+    transform: translateX(130%);
+
+    >div {
+        display: flex;
+        justify-content: space-between;
+
+        >.close_button {
+            background-image: url(../../assets/imgs/icons/close_button.png);
             width: 32px;
-        height: 32px;
-        &:hover{
-            background-image: url(../../assets/imgs/icons/close_button_hover.png);
-            cursor: pointer;
+            height: 32px;
+
+            &:hover {
+                background-image: url(../../assets/imgs/icons/close_button_hover.png);
+                cursor: pointer;
+            }
         }
     }
 }
-}
 
 .hover-div.open {
-  transform: translateX(5%);
+    transform: translateX(5%);
 }
-  
 
-h4{
+
+h4 {
     line-height: 120%;
     color: #679AAC;
     font-size: 24px;
     margin: 0;
 }
 
-.skills{
+.skills {
     display: flex;
     gap: 8px;
     flex-direction: column;
-    >a{
-    margin: 0;
-    text-decoration: none;
-      color: #1D1D1D;
-  } 
+
+    >a {
+        margin: 0;
+        text-decoration: none;
+        color: #1D1D1D;
+    }
 }
 
-button{
-    
+button {
+
     background-color: transparent;
     border-radius: 100px;
     width: 40px;
     height: 40px;
     padding: 10px;
-    
+
     font-size: 18px;
     font-weight: 600;
     display: flex;
@@ -171,40 +188,42 @@ button{
     align-items: center;
 }
 
-button:hover{
+button:hover {
     background-color: #FF834F;
     cursor: pointer;
 }
 
-.btn_black{
+.btn_black {
     border: 1px solid #1D1D1D;
     color: #1D1D1D;
 }
 
-.btn_white{
+.btn_white {
     border: 1px solid #F8F7E5;
     color: #F8F7E5;
 }
 
-@media (max-width: 995px){
-    .navbar_white{
+@media (max-width: 995px) {
+    .navbar_white {
         display: none;
     }
-     .navbar_black{
+
+    .navbar_black {
         display: none;
     }
-   
-    
+
+
 }
 
-@media (max-width: 754px){
-    .socials{
+@media (max-width: 754px) {
+    .socials {
         display: none;
     }
-    section{
+
+    section {
         padding: 24px 16px;
     }
-    
-   
-    
+
+
+
 }

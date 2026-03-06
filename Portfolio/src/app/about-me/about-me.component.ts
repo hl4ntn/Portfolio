@@ -27,7 +27,6 @@ export class AboutMeComponent implements AfterViewInit {
       ([entry]) => {
         if (entry.isIntersecting) {
           this.pageService.currentPage = 1;
-          console.log('Page 1 ist sichtbar');
           history.replaceState(null, "", `#${'aboutme'}`);
         }
       },

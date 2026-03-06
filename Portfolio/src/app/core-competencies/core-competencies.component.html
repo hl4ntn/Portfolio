@@ -1,92 +1,103 @@
 <div id="2" class="content scroll">
-<app-navbar1></app-navbar1>
-<div class="main">
-    <div class="competencies">
-        <div class="top_part">
-            <h3 class="white">{{ pageService.currentLanguage === 'en' ? "Core Competencies" : 'Kernkompetenzen' }}</h3>
-            <div class="text_box">
-            <p *ngIf="pageService.currentLanguage === 'en'">I have used a variety of front-end technologies in my projects. I have strengthened my skills in building static and dynamic websites, responsive layouts, and data visualization interfaces, always ensuring smooth user experiences.</p>
-            <p *ngIf="pageService.currentLanguage === 'de'">In meinen Projekten habe ich mit verschiedenen Frontend-Technologien gearbeitet und meine Fähigkeiten im Aufbau statischer und dynamischer Websites, responsiver Layouts und Datenvisualisierungen weiterentwickelt. Eine gute Nutzererfahrung war dabei stets im Fokus.</p>
-        </div>
+    <app-navbar1></app-navbar1>
+    <div class="main">
+        <div class="competencies">
+            <div class="top_part">
+                <h3 class="white">{{ pageService.currentLanguage === 'en' ? "Core Competencies" : 'Kernkompetenzen' }}
+                </h3>
+                <div class="text_box">
+                    <p *ngIf="pageService.currentLanguage === 'en'">I have used a variety of front-end technologies in
+                        my projects. I have strengthened my skills in building static and dynamic websites, responsive
+                        layouts, and data visualization interfaces, always ensuring smooth user experiences.</p>
+                    <p *ngIf="pageService.currentLanguage === 'de'">In meinen Projekten habe ich mit verschiedenen
+                        Frontend-Technologien gearbeitet und meine Fähigkeiten im Aufbau statischer und dynamischer
+                        Websites, responsiver Layouts und Datenvisualisierungen weiterentwickelt. Eine gute
+                        Nutzererfahrung war dabei stets im Fokus.</p>
+                </div>
 
-        </div>
-        <div class="bottom_part">
-            <div (mouseenter)="isHovered = true"  (mouseleave)="isHovered = false"  class="turning_sun_div">
-                <img class="turning_sun" src="../../assets/imgs/icons/sun_icon_orange.png" alt="sun icon">
-                <img class="heat_icon" src="../../assets/imgs/icons/heat_emoji.png" alt="heat icon">
-                <div [class.active]="isHovered" class="hover-div"  (mouseenter)="isHovered = true"  (mouseleave)="isHovered = false">
-                    <div class="close_button_activated">
-                    <div (click)="isHovered= false"></div>
-                    </div>
-                    <h4>{{ pageService.currentLanguage === 'en' ? "Don't see the skill you are looking for?" : 'Findest du nicht, wonach du suchst?' }}</h4>
-                    <div class="overlay_content">
-                   
-                        <p *ngIf="pageService.currentLanguage === 'en'">Feel free to contact me. I look forward to expanding on my previous knowledge. Also I have a special interest in learning:</p>
-                         <p *ngIf="pageService.currentLanguage === 'de'">Melde dich gerne bei mir. Ich bin motiviert, mein Wissen weiter auszubauen, und habe besonderes Interesse an:</p>
-                   
-                    <div>
-                        <div>
-                            <img src="./../../assets/imgs/icons/React.png" alt="icon">
-                            <p>React</p>
+            </div>
+            <div class="bottom_part">
+                <div (mouseenter)="isHovered = true" (mouseleave)="isHovered = false" class="turning_sun_div">
+                    <img class="turning_sun" src="../../assets/imgs/icons/sun_icon_orange.png" alt="sun icon">
+                    <img class="heat_icon" src="../../assets/imgs/icons/heat_emoji.png" alt="heat icon">
+                    <div [class.active]="isHovered" class="hover-div" (mouseenter)="isHovered = true"
+                        (mouseleave)="isHovered = false">
+                        <div class="close_button_activated">
+                            <div (click)="isHovered= false"></div>
                         </div>
-                        <div>
-                            <img src="./../../assets/imgs/icons/vue.png" alt="icon">
-                            <p>Vue.js</p>
+                        <h4>{{ pageService.currentLanguage === 'en' ? "Don't see the skill you are looking for?" :
+                            'Findest du nicht, wonach du suchst?' }}</h4>
+                        <div class="overlay_content">
+
+                            <p *ngIf="pageService.currentLanguage === 'en'">Feel free to contact me. I look forward to
+                                expanding on my previous knowledge. Also I have a special interest in learning:</p>
+                            <p *ngIf="pageService.currentLanguage === 'de'">Melde dich gerne bei mir. Ich bin motiviert,
+                                mein Wissen weiter auszubauen, und habe besonderes Interesse an:</p>
+
+                            <div>
+                                <div>
+                                    <img src="./../../assets/imgs/icons/React.png" alt="icon">
+                                    <p>React</p>
+                                </div>
+                                <div>
+                                    <img src="./../../assets/imgs/icons/vue.png" alt="icon">
+                                    <p>Vue.js</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
+                <div class="icons_wrapper">
+                    <div class="icons_box">
+                        <div>
+                            <img src="../../assets/imgs/icons/html_icon.png" alt="html icon">
+                            <p>HTML</p>
+                        </div>
+                        <div>
+                            <img src="../../assets/imgs/icons/css_icon.png" alt="css icon">
+                            <p>CSS</p>
+                        </div>
+                        <div>
+                            <img src="../../assets/imgs/icons/JavaScrips_icon.png" alt="JavaScript icon">
+                            <p>JavaScript</p>
+                        </div>
+                        <div>
+                            <img src="../../assets/imgs/icons/TypeScrips-icon.png" alt="TypeScript icon">
+                            <p>TypeScript</p>
+                        </div>
+                        <div>
+                            <img src="../../assets/imgs/icons/angular_icon.png" alt="Angular icon">
+                            <p>Angular</p>
+                        </div>
+                        <div>
+                            <img src="../../assets/imgs/icons/html_icon.png" alt="html icon">
+                            <p>Firebase</p>
+                        </div>
+                        <div>
+                            <img src="../../assets/imgs/icons/firebase_icon.png" alt="Firebase icon">
+                            <p>Git</p>
+                        </div>
+                        <div>
+                            <img src="../../assets/imgs/icons/rest-api_icon.png" alt="EST-API icon">
+                            <p>REST-API</p>
+                        </div>
+                        <div>
+                            <img src="../../assets/imgs/icons/scrum_icon.png" alt="Scrum icon">
+                            <p>Scrum</p>
+                        </div>
+                        <div>
+                            <img src="../../assets/imgs/icons/material_design_icon.png" alt="Material Design icon">
+                            <p>Material Design</p>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-            <div class="icons_wrapper">
-            <div class="icons_box">
-            <div>
-                <img src="../../assets/imgs/icons/html_icon.png" alt="html icon">
-                <p>HTML</p>
-            </div>
-            <div>
-                <img src="../../assets/imgs/icons/css_icon.png" alt="css icon">
-                <p>CSS</p>
-            </div>
-            <div>
-                <img src="../../assets/imgs/icons/JavaScrips_icon.png" alt="JavaScript icon">
-                <p>JavaScript</p>
-            </div>
-            <div>
-                <img src="../../assets/imgs/icons/TypeScrips-icon.png" alt="TypeScript icon">
-                <p>TypeScript</p>
-            </div>
-            <div>
-                <img src="../../assets/imgs/icons/angular_icon.png" alt="Angular icon">
-                <p>Angular</p>
-            </div>
-            <div>
-                <img src="../../assets/imgs/icons/html_icon.png" alt="html icon">
-                <p>Firebase</p>
-            </div>
-            <div>
-                <img src="../../assets/imgs/icons/firebase_icon.png" alt="Firebase icon">
-                <p>Git</p>
-            </div>
-            <div>
-                <img src="../../assets/imgs/icons/rest-api_icon.png" alt="EST-API icon">
-                <p>REST-API</p>
-            </div>
-            <div>
-                <img src="../../assets/imgs/icons/scrum_icon.png" alt="Scrum icon">
-                <p>Scrum</p>
-            </div>
-            <div>
-                <img src="../../assets/imgs/icons/material_design_icon.png" alt="Material Design icon">
-                <p>Material Design</p>
-            </div>
-        
-        </div></div>
 
         </div>
 
+
+        <app-dots></app-dots>
     </div>
-
-
-    <app-dots></app-dots>
-</div>
 </div>

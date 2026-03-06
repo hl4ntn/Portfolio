@@ -24,7 +24,6 @@ export class LandingPageComponent implements AfterViewInit {
       ([entry]) => {
         if (entry.isIntersecting) {
           this.pageService.currentPage = 0;
-          console.log('Page 0 ist sichtbar');
           history.replaceState(null, "", `#${'HLA'}`);
         }
       },

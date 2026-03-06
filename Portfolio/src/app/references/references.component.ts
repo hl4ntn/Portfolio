@@ -24,7 +24,6 @@ export class ReferencesComponent implements AfterViewInit {
       ([entry]) => {
         if (entry.isIntersecting) {
           this.pageService.currentPage = 4;
-          console.log('Page 4 ist sichtbar');
           history.replaceState(null, "", `#${'references'}`);
         }
       },

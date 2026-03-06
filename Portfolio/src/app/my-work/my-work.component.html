@@ -4,8 +4,10 @@
         <div class="content">
             <div class="heading">
                 <h3>{{ pageService.currentLanguage === 'en' ? "My work" : 'Meine Projekte' }}</h3>
-                <p *ngIf="pageService.currentLanguage === 'en'">Explore a selection of my work here - Interact with the projects to see my skills in action.</p>
-                <p *ngIf="pageService.currentLanguage === 'de'">Entdecke hier eine Auswahl meiner bisherigen Projekte, indem du mit den Slides interagierst.</p>
+                <p *ngIf="pageService.currentLanguage === 'en'">Explore a selection of my work here - Interact with the
+                    projects to see my skills in action.</p>
+                <p *ngIf="pageService.currentLanguage === 'de'">Entdecke hier eine Auswahl meiner bisherigen Projekte,
+                    indem du mit den Slides interagierst.</p>
             </div>
             <div class="projects">
 
@@ -18,50 +20,56 @@
                     <div class="project_presentation">
                         <img [src]="projects[currentProject].icon" alt="icon">
                         <div class="hover-div">
-                             <div class="close_button_activated">
-                    <div></div>
-                    </div>
-                           
+                            <div class="close_button_activated">
+                                <div></div>
+                            </div>
+
                             <div>
 
-                                
-                                    <p *ngIf="pageService.currentLanguage === 'en'" >{{projects[currentProject].participationEN}}</p>
-                                    <p *ngIf="pageService.currentLanguage === 'de'" >{{projects[currentProject].participationDE}}</p>
-                                
+
+                                <p *ngIf="pageService.currentLanguage === 'en'">
+                                    {{projects[currentProject].participationEN}}</p>
+                                <p *ngIf="pageService.currentLanguage === 'de'">
+                                    {{projects[currentProject].participationDE}}</p>
+
                             </div>
                         </div>
-                            <h4>{{projects[currentProject].title}}</h4>
-                            <p class="skills">{{projects[currentProject].skills}}</p>
-                            <p *ngIf="pageService.currentLanguage === 'en'" class="explanation_text">{{projects[currentProject].descriptionEN}}</p>
-                            <p *ngIf="pageService.currentLanguage === 'de'" class="explanation_text">{{projects[currentProject].descriptionDE}}</p>
-                            <div>
-                                <a [href]="projects[currentProject].github" target="_blank">GitHub <img class="rotate"
-                                        src="../../assets/imgs/icons/arrow_right.png" alt="arrow right"></a>
-                                <a [href]="projects[currentProject].link" target="_blank">Live Test <img class="rotate"
-                                        src="../../assets/imgs/icons/arrow_right.png" alt="arrow right"></a>
-                            </div>
-                        </div>
-                        <div class="butttons_div">
-                            <pre (click)="previousProject()"><< {{ pageService.currentLanguage === 'en' ? "Previous project" : 'Vorheriges Projekt' }}</pre>
-                            <pre (click)="nextProject()">{{ pageService.currentLanguage === 'en' ? "Next project" : 'Nächstes Projekt' }}>></pre>
+                        <h4>{{projects[currentProject].title}}</h4>
+                        <p class="skills">{{projects[currentProject].skills}}</p>
+                        <p *ngIf="pageService.currentLanguage === 'en'" class="explanation_text">
+                            {{projects[currentProject].descriptionEN}}</p>
+                        <p *ngIf="pageService.currentLanguage === 'de'" class="explanation_text">
+                            {{projects[currentProject].descriptionDE}}</p>
+                        <div>
+                            <a [href]="projects[currentProject].github" target="_blank">GitHub <img class="rotate"
+                                    src="../../assets/imgs/icons/arrow_right.png" alt="arrow right"></a>
+                            <a [href]="projects[currentProject].link" target="_blank">Live Test <img class="rotate"
+                                    src="../../assets/imgs/icons/arrow_right.png" alt="arrow right"></a>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
+                    <div class="butttons_div">
+                        <pre
+                            (click)="previousProject()"><< {{ pageService.currentLanguage === 'en' ? "Previous project" : 'Vorheriges Projekt' }}</pre>
+                        <pre
+                            (click)="nextProject()">{{ pageService.currentLanguage === 'en' ? "Next project" : 'Nächstes Projekt' }}>></pre>
+                    </div>
                 </div>
 
 
 
 
 
+
+
+
+
             </div>
-            
+
+
+
+
+
+        </div>
+
         <app-dots></app-dots>
     </div>

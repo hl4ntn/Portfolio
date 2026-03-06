@@ -1,67 +1,89 @@
 <div id="4" class="content_wrapper scroll">
 
-<app-navbar1></app-navbar1>
-<div class="main">
-    <div class="content">
-        <h3>{{ pageService.currentLanguage === 'en' ? "What my colleagues say about me" : 'Referenzen meines Teams' }}</h3>
-        <div class="comments">
-        <div class="pos_rel">
+    <app-navbar1></app-navbar1>
+    <div class="main">
+        <div class="content">
+            <h3>{{ pageService.currentLanguage === 'en' ? "What my colleagues say about me" : 'Referenzen meines Teams'
+                }}</h3>
+            <div class="comments">
+                <div class="pos_rel">
 
 
 
-            <div class="comment_section_left">
-            <div style="z-index:99;" class="comment_div">
-               
-                <div class="reference_box">
-                     <img src="../../assets/imgs/icons/small_sun.png" alt="icon">
-                    <h4>Tanja Schulz</h4>
-                   <p *ngIf="pageService.currentLanguage === 'en'">I will add the references of my future team mates of the DABubble project here, because I cannot find my team partners from JOIN on linkedin. </p>
-                    <p *ngIf="pageService.currentLanguage === 'de'">Hier kommt der Text von einer zukünftigen Gruppenarbeit herein, da ich meine Gruppenpartner von JOIN nicht auf LinkedIn finde und daher dann die nächsten fragen werde. </p>
-                    <p class="bold">Frontend Developer</p>
+                    <div class="comment_section_left">
+                        <div style="z-index:99;" class="comment_div">
+
+                            <div class="reference_box">
+                                <img src="../../assets/imgs/icons/small_sun.png" alt="icon">
+                                <h4>Tanja Schulz</h4>
+                                <p *ngIf="pageService.currentLanguage === 'en'">I will add the references of my future
+                                    team mates of the DABubble project here, because I cannot find my team partners from
+                                    JOIN on linkedin. </p>
+                                <p *ngIf="pageService.currentLanguage === 'de'">Hier kommt der Text von einer
+                                    zukünftigen Gruppenarbeit herein, da ich meine Gruppenpartner von JOIN nicht auf
+                                    LinkedIn finde und daher dann die nächsten fragen werde. </p>
+                                <p class="bold">Frontend Developer</p>
+                            </div>
+                            <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank">
+                                <p>{{ pageService.currentLanguage === 'en' ? "view LinkedIn profile" : 'zum LinkedIn
+                                    profile' }} >></p>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="comment_section_center">
+                        <div style="z-index:98;" class="comment_div">
+
+                            <div class="reference_box">
+                                <img src="../../assets/imgs/icons/small_sun.png" alt="icon">
+                                <h4>Tanja Schulz</h4>
+                                <p *ngIf="pageService.currentLanguage === 'en'">I will add the references of my future
+                                    team mates of the DABubble project here, because I cannot find my team partners from
+                                    JOIN on linkedin. </p>
+                                <p *ngIf="pageService.currentLanguage === 'de'">Hier kommt der Text von einer
+                                    zukünftigen Gruppenarbeit herein, da ich meine Gruppenpartner von JOIN nicht auf
+                                    LinkedIn finde und daher dann die nächsten fragen werde. </p>
+                                <p class="bold">Frontend Developer</p>
+                            </div>
+                            <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank">
+                                <p>{{ pageService.currentLanguage === 'en' ? "view LinkedIn profile" : 'zum LinkedIn
+                                    profile' }} >></p>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="comment_section_right">
+                        <div style="z-index:97;" class="comment_div">
+
+                            <div class="reference_box">
+                                <img src="../../assets/imgs/icons/small_sun.png" alt="icon">
+                                <h4>Tanja Schulz</h4>
+                                <p *ngIf="pageService.currentLanguage === 'en'">I will add the references of my future
+                                    team mates of the DABubble project here, because I cannot find my team partners from
+                                    JOIN on linkedin. </p>
+                                <p *ngIf="pageService.currentLanguage === 'de'">Hier kommt der Text von einer
+                                    zukünftigen Gruppenarbeit herein, da ich meine Gruppenpartner von JOIN nicht auf
+                                    LinkedIn finde und daher dann die nächsten fragen werde. </p>
+                                <p class="bold">Frontend Developer</p>
+                            </div>
+                            <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank">
+                                <p>{{ pageService.currentLanguage === 'en' ? "view LinkedIn profile" : 'zum LinkedIn
+                                    profile' }} >></p>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
                 </div>
-                <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank"><p>{{ pageService.currentLanguage === 'en' ? "view LinkedIn profile" : 'zum LinkedIn profile' }} >></p></a>
             </div>
-            </div>
-
-
-            <div class="comment_section_center">
-            <div  style="z-index:98;" class="comment_div">
-                
-                <div class="reference_box">
-                    <img src="../../assets/imgs/icons/small_sun.png" alt="icon">
-                    <h4>Tanja Schulz</h4>
-                    <p *ngIf="pageService.currentLanguage === 'en'">I will add the references of my future team mates of the DABubble project here, because I cannot find my team partners from JOIN on linkedin. </p>
-                    <p *ngIf="pageService.currentLanguage === 'de'">Hier kommt der Text von einer zukünftigen Gruppenarbeit herein, da ich meine Gruppenpartner von JOIN nicht auf LinkedIn finde und daher dann die nächsten fragen werde. </p>
-                    <p class="bold">Frontend Developer</p>
-                </div>
-                <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank"><p>{{ pageService.currentLanguage === 'en' ? "view LinkedIn profile" : 'zum LinkedIn profile' }} >></p></a>
-            </div>
-            </div>
-
-
-
-            <div class="comment_section_right">
-            <div  style="z-index:97;" class="comment_div">
-                
-                <div class="reference_box">
-                    <img src="../../assets/imgs/icons/small_sun.png" alt="icon">
-                    <h4>Tanja Schulz</h4>
-                    <p *ngIf="pageService.currentLanguage === 'en'">I will add the references of my future team mates of the DABubble project here, because I cannot find my team partners from JOIN on linkedin. </p>
-                    <p *ngIf="pageService.currentLanguage === 'de'">Hier kommt der Text von einer zukünftigen Gruppenarbeit herein, da ich meine Gruppenpartner von JOIN nicht auf LinkedIn finde und daher dann die nächsten fragen werde. </p>
-                    <p class="bold">Frontend Developer</p>
-                </div>
-                <a href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank"><p>{{ pageService.currentLanguage === 'en' ? "view LinkedIn profile" : 'zum LinkedIn profile' }} >></p></a>
-            </div>
-            </div>
-
-
 
 
         </div>
-        </div>
-
-        
+        <app-dots></app-dots>
     </div>
-<app-dots></app-dots>
-</div>
 </div>

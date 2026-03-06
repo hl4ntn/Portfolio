@@ -31,7 +31,6 @@ export class PrivacyPolicyComponent {
         window.history.go(-2);  
       }
 
-  console.log(this.pageService.currentPage);
 }
 switchCurrentPage(){
   this.pageService.currentPage = 0;

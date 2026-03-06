@@ -28,7 +28,6 @@ export class CoreCompetenciesComponent implements AfterViewInit {
       ([entry]) => {
         if (entry.isIntersecting) {
           this.pageService.currentPage = 2;
-          console.log('Page 2 ist sichtbar');
           history.replaceState(null, "", `#${'competencies'}`);
         }
       },

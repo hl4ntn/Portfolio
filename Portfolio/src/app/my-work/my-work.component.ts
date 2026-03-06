@@ -71,7 +71,6 @@ export class MyWorkComponent  implements AfterViewInit {
       ([entry]) => {
         if (entry.isIntersecting) {
           this.pageService.currentPage = 3;
-          console.log('Page 3 ist sichtbar');
           history.replaceState(null, "", `#${'mywork'}`);
         }
       },

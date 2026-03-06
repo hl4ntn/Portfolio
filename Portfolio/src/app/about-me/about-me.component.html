@@ -1,72 +1,72 @@
-
-
 <div id="1" class="content scroll">
-    
+
     <app-navbar1></app-navbar1>
     <div class="content_wrapper">
-    <div class="main">
-        <div class="left_part">
-            <img src="../../assets/imgs/photo2.png" alt="photo">
-        </div>
-            <h3>{{ pageService.currentLanguage === 'en' ? "About me" : 'Über mich' }}</h3>
-        <div class="floating_div">
-        <div class="text_box">
-              <p *ngIf="pageService.currentLanguage === 'en'">
-    Hey there, I’m Hannah. I’m passionate about bringing customers’ ideas to life
-    from the start to the end of a project and accompanying them throughout the
-    entire process. I thrive on solving problems and finding solutions that make
-    life easier for myself and others. Error messages inspire me to dig deeper and
-    understand the logic behind them.
-    <br><br>
-    Let's connect and create something together!
-  </p>
-
-  <p *ngIf="pageService.currentLanguage === 'de'">
-    Hey, ich bin Hannah. Die Projekte meiner Kund*innen von Anfang bis Ende zu gestalten und sie während des gesamten Prozesses zu begleiten begeistert mich. Probleme lösen und Lösungen finden, das Leben erleichtern: das ist was mich täglich antreibt.
-    <br><br>
-    Lass uns vernetzen und gemeinsam etwas Tolles erschaffen!
-  </p>
-            <div>
-                <a [href]="'#5'">{{ pageService.currentLanguage === 'en' ? "Let's Talk" : 'Kontaktier mich' }}</a>
-                <img src="../../assets/imgs/icons/emoji1.png" alt="emoji">
-                
+        <div class="main">
+            <div class="left_part">
+                <img src="../../assets/imgs/photo2.png" alt="photo">
             </div>
-            <div  (mouseenter)="isHovered = true"  (mouseleave)="isHovered = false"  class="hover_img"></div>
-        </div>
-        </div>
-  </div>      
-<app-dots></app-dots>
-</div>
-<div  [class.active]="isHovered" class="invisible_div">
+            <h3>{{ pageService.currentLanguage === 'en' ? "About me" : 'Über mich' }}</h3>
+            <div class="floating_div">
+                <div class="text_box">
+                    <p *ngIf="pageService.currentLanguage === 'en'">
+                        Hey there, I’m Hannah. I’m passionate about bringing customers’ ideas to life
+                        from the start to the end of a project and accompanying them throughout the
+                        entire process. I thrive on solving problems and finding solutions that make
+                        life easier for myself and others. Error messages inspire me to dig deeper and
+                        understand the logic behind them.
+                        <br><br>
+                        Let's connect and create something together!
+                    </p>
 
-                <div  (mouseenter)="isHovered = true"  (mouseleave)="isHovered = false" class="hover-div-aboutMe">
-                    <div class="close_button_activated">
-                    <h4>{{ pageService.currentLanguage === 'en' ? "More about me" : 'Mehr über mich' }}</h4>
-                    <div (click)="isHovered= false"></div>
-                    </div>
-                    <div class="skills">
+                    <p *ngIf="pageService.currentLanguage === 'de'">
+                        Hey, ich bin Hannah. Die Projekte meiner Kund*innen von Anfang bis Ende zu gestalten und sie
+                        während des gesamten Prozesses zu begleiten begeistert mich. Probleme lösen und Lösungen finden,
+                        das Leben erleichtern: das ist was mich täglich antreibt.
+                        <br><br>
+                        Lass uns vernetzen und gemeinsam etwas Tolles erschaffen!
+                    </p>
                     <div>
-                        <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>{{ pageService.currentLanguage === 'en' ? "Organised" : 'Organisiert' }}</p>
+                        <a [href]="'#5'">{{ pageService.currentLanguage === 'en' ? "Let's Talk" : 'Kontaktier mich'
+                            }}</a>
+                        <img src="../../assets/imgs/icons/emoji1.png" alt="emoji">
+
                     </div>
-                    <div>
-                        <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>{{ pageService.currentLanguage === 'en' ? "Continously learning" : 'Lernbereit' }}</p>
-                    </div>
-                    <div>
-                        <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>{{ pageService.currentLanguage === 'en' ? "Analytical Thinker" : 'Analytisch' }}</p>
-                    </div>
-                    <div>
-                        <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>{{ pageService.currentLanguage === 'en' ? "Based in Hannover" : 'Wohnhaft in Hannover' }}</p>
-                    </div>
-                    <div>
-                        <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
-                        <p>{{ pageService.currentLanguage === 'en' ? "Open to work remote" : 'Remote-Arbeit möglich' }}</p>
-                    </div>
-                    </div>
+                    <div (mouseenter)="isHovered = true" (mouseleave)="isHovered = false" class="hover_img"></div>
                 </div>
             </div>
-</div>
+        </div>
+        <app-dots></app-dots>
+    </div>
+    <div [class.active]="isHovered" class="invisible_div">
 
+        <div (mouseenter)="isHovered = true" (mouseleave)="isHovered = false" class="hover-div-aboutMe">
+            <div class="close_button_activated">
+                <h4>{{ pageService.currentLanguage === 'en' ? "More about me" : 'Mehr über mich' }}</h4>
+                <div (click)="isHovered= false"></div>
+            </div>
+            <div class="skills">
+                <div>
+                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                    <p>{{ pageService.currentLanguage === 'en' ? "Organised" : 'Organisiert' }}</p>
+                </div>
+                <div>
+                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                    <p>{{ pageService.currentLanguage === 'en' ? "Continously learning" : 'Lernbereit' }}</p>
+                </div>
+                <div>
+                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                    <p>{{ pageService.currentLanguage === 'en' ? "Analytical Thinker" : 'Analytisch' }}</p>
+                </div>
+                <div>
+                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                    <p>{{ pageService.currentLanguage === 'en' ? "Based in Hannover" : 'Wohnhaft in Hannover' }}</p>
+                </div>
+                <div>
+                    <img src="./../../assets/imgs/icons/check_circle.png" alt="icon">
+                    <p>{{ pageService.currentLanguage === 'en' ? "Open to work remote" : 'Remote-Arbeit möglich' }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

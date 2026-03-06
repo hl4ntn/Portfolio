@@ -1,82 +1,87 @@
 @if(pageService.currentPage === 0){
-    <section>
+<section>
     <div class="socials">
         <a class="github" href="https://github.com/hl4ntn" target="_blank"> </a>
         <a class="linkedin" href="https://www.linkedin.com/in/hannah-luisa-a-16baa8201/" target="_blank"></a>
         <a href="mailto:hannah.anton@gmx.de" class="mail"></a>
-        
+
     </div>
     <div style="pointer-events: none;" class="name_header">
         <img src="./../../../assets/imgs/icons/logo.png" alt="logo">
         <p class="white">H.L.A.</p>
     </div>
     <div class="menu-options">
-        <button class="btn_white" (click)="toggleLanguage()"> {{ pageService.currentLanguage === 'en' ? 'DE' : 'EN' }}</button>
+        <button class="btn_white" (click)="toggleLanguage()"> {{ pageService.currentLanguage === 'en' ? 'DE' : 'EN'
+            }}</button>
         <div (click)="toggleMenu()" class="burger_menu_white"></div>
         <div [class.open]="menuOpen" class="hover-div">
-                    <div>
-                        <h4>Menu</h4>
-                        <div class="close_button" (click)="toggleMenu()"></div>
-                    </div>
-                    <div class="skills">
-                        <a [href]="'#1'">{{ pageService.currentLanguage === 'en' ? "About Me" : 'Über mich' }}</a>
-                        <a [href]="'#2'">{{ pageService.currentLanguage === 'en' ? "Skills" : 'Skillset' }}</a>
-                        <a [href]="'#3'">{{ pageService.currentLanguage === 'en' ? "Portfolio" : 'Portfolio' }}</a>
-                        <a [href]="'#4'">{{ pageService.currentLanguage === 'en' ? "References" : 'Referenzen' }}</a>
-                        <a [href]="'#5'">{{ pageService.currentLanguage === 'en' ? "Contact me" : 'Kontakt' }}</a>
-                    </div>
-                </div>
+            <div>
+                <h4>Menu</h4>
+                <div class="close_button" (click)="toggleMenu()"></div>
+            </div>
+            <div class="skills">
+                <a [href]="'#1'">{{ pageService.currentLanguage === 'en' ? "About Me" : 'Über mich' }}</a>
+                <a [href]="'#2'">{{ pageService.currentLanguage === 'en' ? "Skills" : 'Skillset' }}</a>
+                <a [href]="'#3'">{{ pageService.currentLanguage === 'en' ? "Portfolio" : 'Portfolio' }}</a>
+                <a [href]="'#4'">{{ pageService.currentLanguage === 'en' ? "References" : 'Referenzen' }}</a>
+                <a [href]="'#5'">{{ pageService.currentLanguage === 'en' ? "Contact me" : 'Kontakt' }}</a>
+            </div>
+        </div>
     </div>
 </section>
-            } @else if(pageService.currentPage % 2 === 0 || pageService.currentPage > 4){
-                <section class="navbar_white">
-    <a style="text-decoration: none;" [href]="'#0'"><div class="name_header">
-        <img src="./../../../assets/imgs/icons/logo.png" alt="logo">
-        <p class="white">H.L.A.</p>
-    </div></a>
+} @else if(pageService.currentPage % 2 === 0 || pageService.currentPage > 4){
+<section class="navbar_white">
+    <a style="text-decoration: none;" [href]="'#0'">
+        <div class="name_header">
+            <img src="./../../../assets/imgs/icons/logo.png" alt="logo">
+            <p class="white">H.L.A.</p>
+        </div>
+    </a>
     <div class="menu-options">
-        <button class="btn_white" (click)="toggleLanguage()">{{ pageService.currentLanguage === 'en' ? 'DE' : 'EN' }}</button>
-        <div  (click)="toggleMenu()" class="burger_menu_white"></div>
+        <button class="btn_white" (click)="toggleLanguage()">{{ pageService.currentLanguage === 'en' ? 'DE' : 'EN'
+            }}</button>
+        <div (click)="toggleMenu()" class="burger_menu_white"></div>
         <div [class.open]="menuOpen" class="hover-div">
-                    <div>
-                        <h4>Menu</h4>
-                        <div class="close_button" (click)="toggleMenu()"></div>
-                    </div>
-                    <div class="skills">
-                        <a [href]="'#1'">{{ pageService.currentLanguage === 'en' ? "About Me" : 'Über mich' }}</a>
-                        <a [href]="'#2'">{{ pageService.currentLanguage === 'en' ? "Skills" : 'Skillset' }}</a>
-                        <a [href]="'#3'">{{ pageService.currentLanguage === 'en' ? "Portfolio" : 'Portfolio' }}</a>
-                        <a [href]="'#4'">{{ pageService.currentLanguage === 'en' ? "References" : 'Referenzen' }}</a>
-                        <a [href]="'#5'">{{ pageService.currentLanguage === 'en' ? "Contact me" : 'Kontakt' }}</a>
-                    </div>
-                </div>
+            <div>
+                <h4>Menu</h4>
+                <div class="close_button" (click)="toggleMenu()"></div>
+            </div>
+            <div class="skills">
+                <a [href]="'#1'">{{ pageService.currentLanguage === 'en' ? "About Me" : 'Über mich' }}</a>
+                <a [href]="'#2'">{{ pageService.currentLanguage === 'en' ? "Skills" : 'Skillset' }}</a>
+                <a [href]="'#3'">{{ pageService.currentLanguage === 'en' ? "Portfolio" : 'Portfolio' }}</a>
+                <a [href]="'#4'">{{ pageService.currentLanguage === 'en' ? "References" : 'Referenzen' }}</a>
+                <a [href]="'#5'">{{ pageService.currentLanguage === 'en' ? "Contact me" : 'Kontakt' }}</a>
+            </div>
+        </div>
     </div>
 </section>
-            } @else {
+} @else {
 
 
-               <section class="navbar_white"><a style="text-decoration: none;" [href]="'#0'"><div  class="name_header">
-        <img src="./../../../assets/imgs/icons/logo.png" alt="logo">
-        <p class="black">H.L.A.</p>
-    </div></a>
+<section class="navbar_white"><a style="text-decoration: none;" [href]="'#0'">
+        <div class="name_header">
+            <img src="./../../../assets/imgs/icons/logo.png" alt="logo">
+            <p class="black">H.L.A.</p>
+        </div>
+    </a>
     <div class="menu-options">
-        <button class="btn_black" (click)="toggleLanguage()">{{ pageService.currentLanguage === 'en' ? 'DE' : 'EN' }}</button>
-        <div  (click)="toggleMenu()" class="burger_menu_black"></div>
+        <button class="btn_black" (click)="toggleLanguage()">{{ pageService.currentLanguage === 'en' ? 'DE' : 'EN'
+            }}</button>
+        <div (click)="toggleMenu()" class="burger_menu_black"></div>
         <div [class.open]="menuOpen" class="hover-div">
-                    <div>
-                        <h4>Menu</h4>
-                        <div class="close_button" (click)="toggleMenu()"></div>
-                    </div>
-                    <div class="skills">
-                        <a [href]="'#1'">{{ pageService.currentLanguage === 'en' ? "About Me" : 'Über mich' }}</a>
-                        <a [href]="'#2'">{{ pageService.currentLanguage === 'en' ? "Skills" : 'Skillset' }}</a>
-                        <a [href]="'#3'">{{ pageService.currentLanguage === 'en' ? "Portfolio" : 'Portfolio' }}</a>
-                        <a [href]="'#4'">{{ pageService.currentLanguage === 'en' ? "References" : 'Referenzen' }}</a>
-                        <a [href]="'#5'">{{ pageService.currentLanguage === 'en' ? "Contact me" : 'Kontakt' }}</a>
-                    </div>
-                </div>
-    </div></section>
-            }
-    
-    
-
+            <div>
+                <h4>Menu</h4>
+                <div class="close_button" (click)="toggleMenu()"></div>
+            </div>
+            <div class="skills">
+                <a [href]="'#1'">{{ pageService.currentLanguage === 'en' ? "About Me" : 'Über mich' }}</a>
+                <a [href]="'#2'">{{ pageService.currentLanguage === 'en' ? "Skills" : 'Skillset' }}</a>
+                <a [href]="'#3'">{{ pageService.currentLanguage === 'en' ? "Portfolio" : 'Portfolio' }}</a>
+                <a [href]="'#4'">{{ pageService.currentLanguage === 'en' ? "References" : 'Referenzen' }}</a>
+                <a [href]="'#5'">{{ pageService.currentLanguage === 'en' ? "Contact me" : 'Kontakt' }}</a>
+            </div>
+        </div>
+    </div>
+</section>
+}
